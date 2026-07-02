@@ -137,9 +137,8 @@ Participating in **FCAJ Community Day** provided valuable opportunities to learn
 
 ### Event Photos
 
-![FCAJ Community Day](event2.jpg)
+![FCAJ Community Day](/images/4-Events/event2.jpg)
 
 *Figure 2. Photo taken during the FCAJ Community Day event.*
 
 > After attending **FCAJ Community Day**, I realized that AI is much more than a coding assistant—it can support the entire learning and development process when used effectively. I was particularly impressed by the importance of providing proper **context** and how enterprises leverage **AI Agents** to solve real-world business problems. The event also strengthened my understanding of problem-solving, teamwork, and motivated me to continue learning more about AI and Cloud Computing.
-```

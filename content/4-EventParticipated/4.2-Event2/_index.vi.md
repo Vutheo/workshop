@@ -137,9 +137,8 @@ Tham gia **FCAJ Community Day** giúp tôi có cơ hội tiếp cận nhiều ki
 
 ### Một số hình ảnh khi tham gia sự kiện
 
-![FCAJ Community Day](event2.jpg)
+![FCAJ Community Day](/images/4-Events/event2.jpg)
 
 *Hình 2. Hình ảnh tại sự kiện FCAJ Community Day.*
 
 > Sau khi tham gia **FCAJ Community Day**, tôi nhận ra AI không chỉ hỗ trợ viết code mà còn có thể đồng hành trong quá trình học tập và làm việc nếu được sử dụng đúng cách. Tôi đặc biệt ấn tượng với tư duy xây dựng **Context** khi làm việc với AI và cách doanh nghiệp ứng dụng **AI Agent** để giải quyết các bài toán thực tế. Buổi hội thảo cũng giúp tôi hiểu rõ hơn tầm quan trọng của tư duy giải quyết vấn đề, kỹ năng làm việc nhóm và tạo thêm động lực để tiếp tục học tập, tìm hiểu sâu hơn về AI và Cloud.
-```

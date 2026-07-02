@@ -47,4 +47,3 @@ During my participation in the **First Cloud AI Journey**, I had the opportunity
 &emsp;**Role:** Participant
 
 &emsp;**Description:** Shared insights into Cloud career development, Voice AI, DevOps Agents, enterprise applications of Amazon Q, and secure Private MCP solutions for Amazon Q.
-```

@@ -113,7 +113,7 @@ Tham gia **FCAJ Community Day** mang lại cho tôi nhiều kiến thức thực
 
 ### Một số hình ảnh khi tham gia sự kiện
 
-![FCAJ Community Day](event1.jpg)
+![FCAJ Community Day](/images/4-Events/event1.jpg)
 
 *Hình 1. Hình ảnh tại sự kiện FCAJ Community Day.*
 

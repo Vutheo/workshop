@@ -1,4 +1,3 @@
-```md
 ---
 title: "Các events đã tham gia"
 date: 2026-04-26
@@ -48,4 +47,3 @@ Trong quá trình tham gia **First Cloud AI Journey**, em đã có cơ hội tha
 &emsp;**Vai trò trong sự kiện:** Người tham dự
 
 &emsp;**Nội dung:** Chia sẻ về lộ trình nghề nghiệp trong lĩnh vực Cloud, xây dựng Voice AI, DevOps Agent, ứng dụng Amazon Q trong doanh nghiệp và giải pháp bảo mật Private MCP cho Amazon Q.
-```

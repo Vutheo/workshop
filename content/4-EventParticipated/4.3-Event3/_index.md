@@ -113,9 +113,8 @@ Participating in **FCAJ Community Day - June 2026** helped me better understand 
 
 ### Event Photos
 
-![FCAJ Community Day](event3.jpg)
+![FCAJ Community Day](/images/4-Events/event3.jpg)
 
 *Figure 3. Photo taken during the FCAJ Community Day event.*
 
 > After attending the seminar, I gained a better understanding of how AI is applied in enterprises to solve real-world problems such as system operations, recruitment, and customer service. The speakers also helped me develop a clearer learning direction for AI, Cloud Computing, and AWS services to better prepare for my future career.
-```

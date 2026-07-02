@@ -113,9 +113,8 @@ Tham gia **FCAJ Community Day - June 2026** giúp tôi hiểu rõ hơn cách cá
 
 ### Một số hình ảnh khi tham gia sự kiện
 
-![FCAJ Community Day](event3.jpg)
+![FCAJ Community Day](/images/4-Events/event3.jpg)
 
 *Hình 3. Hình ảnh tại sự kiện FCAJ Community Day.*
 
 > Sau buổi hội thảo, tôi hiểu rõ hơn cách AI được ứng dụng trong doanh nghiệp để giải quyết các bài toán thực tế như vận hành hệ thống, tuyển dụng và chăm sóc khách hàng. Những chia sẻ của các diễn giả cũng giúp tôi có định hướng rõ hơn trong việc học AI, Cloud Computing và các dịch vụ AWS để chuẩn bị cho công việc trong tương lai.
-```

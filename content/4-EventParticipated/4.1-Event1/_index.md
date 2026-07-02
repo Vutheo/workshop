@@ -114,9 +114,8 @@ Participating in **FCAJ Community Day** provided valuable insights into effectiv
 
 ### Event Photos
 
-![FCAJ Community Day](event1.jpg)
+![FCAJ Community Day](/images/4-Events/event1.jpg)
 
 *Figure 1. Photo taken during the FCAJ Community Day event.*
 
 > Overall, FCAJ Community Day helped me learn effective study methods while providing practical insights into career development, the engineering mindset, and the application of AI in software development. These valuable lessons can be applied directly to both my studies and future career.
-```
