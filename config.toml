@@ -1,27 +1,30 @@
-baseURL = "/workshop/"
+baseURL = "https://vutheo.github.io/workshop/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
 
-# Change the default theme to be use when building the site with Hugo
+# Change the default theme to be used when building the site with Hugo
 theme = "hugo-theme-learn"
 
 # For search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  # Change default color scheme. Can be "red", "blue", "green", or custom variant.
   themeVariant = "workshop"
-  # Git hub repo link
-  editURL = "https://github.com/locle1010/workshop/edit/main/content/"
+
+  # GitHub repository link for content
+  editURL = "https://github.com/Vutheo/workshop/tree/main/content"
+
   description = ""
-  author = "Lê Tấn Lộc"
+  author = "Vũ Thị Thanh Thảo"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  
+
 [Languages]
+
 [Languages.en]
 title = "Internship Report"
 weight = 1
@@ -36,7 +39,7 @@ weight = 20
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-github'></i> My GitHub Repo"
 identifier = "My GitHub Repo"
-url = "https://github.com/locle1010/workshop"
+url = "https://github.com/Vutheo/workshop"
 weight = 21
 
 [Languages.vi]
@@ -53,7 +56,7 @@ weight = 20
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub của tôi"
 identifier = "GitHub cua toi"
-url = "https://github.com/locle1010/workshop"
+url = "https://github.com/Vutheo/workshop"
 weight = 21
 
 [markup]
