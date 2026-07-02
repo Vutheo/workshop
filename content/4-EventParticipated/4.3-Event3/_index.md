@@ -1,4 +1,3 @@
-```md
 ---
 title: "Event 3"
 date: 2026-06-27

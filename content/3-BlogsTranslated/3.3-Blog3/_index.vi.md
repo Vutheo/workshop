@@ -1,5 +1,5 @@
 ---
-title: "Tạo Model 3D từ việc dùng AI để chuyển đổi hình 2D sang 3D Assets (AWS)"
+title: "Blog 3"
 date: 2026-06-20
 weight: 3
 chapter: false

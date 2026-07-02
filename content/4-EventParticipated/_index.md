@@ -1,4 +1,3 @@
-```md id="r6m4xp"
 ---
 title: "Events Attended"
 date: 2026-04-26

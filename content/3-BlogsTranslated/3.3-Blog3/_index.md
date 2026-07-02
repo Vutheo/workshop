@@ -1,5 +1,5 @@
 ---
-title: "Creating 3D Models by Using AI to Convert 2D Images into 3D Assets (AWS)"
+title: "Blog 3"
 date: 2026-06-20
 weight: 3
 chapter: false
