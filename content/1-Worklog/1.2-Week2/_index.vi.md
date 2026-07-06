@@ -10,37 +10,38 @@ pre: " <b> 1.2. </b> "
 
 * Tiếp tục tìm hiểu tổng quan về AWS và các nhóm dịch vụ cơ bản.
 * Hoàn thiện việc tạo và làm quen với tài khoản AWS Free Tier.
-* Quan sát và học qua các video training về Cloud Computing.
-* Củng cố nền tảng kiến thức trước khi bắt đầu thực hành sâu hơn ở các tuần tiếp theo.
+* Học các kiến thức nền tảng về Cloud Computing thông qua các video từ AWS Study Group.
+* Củng cố kiến thức cơ bản để chuẩn bị cho các nội dung thực hành ở những tuần tiếp theo.
 
 ### Các công việc triển khai trong tuần:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------- | ------------ | --------------- | --------------- |
-| Thứ sáu | Làm quen lại nhóm, cập nhật tiến độ công việc và thống nhất kế hoạch học tập tuần | 24/04/2026 | 24/04/2026 | |
-| Thứ bảy | Tiếp tục tìm hiểu tổng quan AWS và các nhóm dịch vụ chính: Compute, Storage, Networking, Database | 25/04/2026 | 25/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Chủ nhật | Tạo và hoàn thiện AWS Free Tier account, tìm hiểu cách quản lý tài khoản AWS cơ bản | 26/04/2026 | 26/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ hai | Xem các video về Cloud Computing trên AWS Study Group (Module 01-01, 01-02, 01-03) để hiểu nền tảng cloud | 27/04/2026 | 28/04/2026 | https://www.youtube.com/@AWSStudyGroup |
-| Thứ tư | Tổng hợp kiến thức đã học và thảo luận nhóm về định hướng project và các dịch vụ AWS liên quan | 29/04/2026 | 30/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ sáu | Làm quen lại nhóm, cập nhật tiến độ công việc và thống nhất kế hoạch học tập trong tuần. | 24/04/2026 | 24/04/2026 | |
+| Thứ bảy | Tiếp tục tìm hiểu tổng quan về AWS và các nhóm dịch vụ chính như Compute, Storage, Networking và Database. | 25/04/2026 | 25/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Chủ nhật | Tạo và hoàn thiện tài khoản AWS Free Tier, làm quen với AWS Management Console và cách quản lý tài khoản AWS. | 26/04/2026 | 26/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ hai | Xem các video đào tạo của AWS Study Group gồm Module 01-01, 01-02 và 01-03 để tìm hiểu các kiến thức nền tảng về Cloud Computing và AWS. | 27/04/2026 | 28/04/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ tư | Tổng hợp kiến thức đã học, trao đổi cùng các thành viên trong nhóm về định hướng dự án và các dịch vụ AWS phù hợp. | 29/04/2026 | 30/04/2026 | https://cloudjourney.awsstudygroup.com/ |
 
 ### Kết quả đạt được tuần 2:
 
 * Hiểu rõ hơn về mô hình Cloud Computing và cách AWS vận hành ở mức tổng quan.
-* Hoàn thiện AWS Free Tier account và làm quen với giao diện AWS Management Console.
+
+* Hoàn thiện tài khoản AWS Free Tier và làm quen với giao diện AWS Management Console.
+
 * Nắm được các nhóm dịch vụ AWS cơ bản:
   * Compute
   * Storage
   * Networking
   * Database
 
-* Tiếp cận các video học tập từ AWS Study Group:
-  * Module 01-01: Introduction to Cloud Computing
-  * Module 01-02: Core Concepts of Cloud
-  * Module 01-03: Starting Your Cloud Journey
+* Hoàn thành các video học tập từ AWS Study Group:
+  * Module 01-01: Điện toán đám mây là gì?
+  * Module 01-02: Điều gì tạo nên sự khác biệt của AWS?
+  * Module 01-03: Bắt đầu hành trình lên mây như thế nào?
 
-* Có cái nhìn rõ hơn về cách các dịch vụ cloud được áp dụng trong thực tế.
+* Có cái nhìn rõ hơn về những lợi ích của điện toán đám mây cũng như cách AWS được ứng dụng trong thực tế.
 
-* Củng cố định hướng cho project nhóm dựa trên kiến thức đã học.
+* Củng cố định hướng ban đầu cho dự án nhóm dựa trên các kiến thức đã học.
 
-* Chuẩn bị nền tảng kiến thức để bắt đầu các tuần thực hành chuyên sâu tiếp theo.
-
+* Chuẩn bị nền tảng kiến thức để tiếp tục thực hành các dịch vụ AWS ở những tuần tiếp theo.

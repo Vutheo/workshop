@@ -21,8 +21,6 @@ Amazon Cognito từ lâu đã là dịch vụ quen thuộc để quản lý đă
 
 AWS đã giới thiệu **Amazon Verified Permissions** để giải quyết bài toán này.
 
----
-
 ## Amazon Verified Permissions hoạt động như thế nào?
 
 Amazon Verified Permissions là dịch vụ quản lý quyền truy cập tập trung, sử dụng ngôn ngữ chính sách **Cedar**.
@@ -38,8 +36,6 @@ Trong kiến trúc được AWS giới thiệu:
 
 Việc tách riêng phần xác thực và phân quyền giúp ứng dụng trở nên linh hoạt và dễ quản lý hơn.
 
----
-
 ## Các mô hình phân quyền phổ biến
 
 Bài viết của AWS giới thiệu nhiều mô hình phân quyền thường gặp trong các hệ thống doanh nghiệp.
@@ -52,8 +48,6 @@ Ví dụ:
 
 - Chỉnh sửa hồ sơ cá nhân.
 - Cập nhật tài liệu của bản thân.
-
----
 
 ### Role-Based Access Control (RBAC)
 
@@ -68,8 +62,6 @@ Ví dụ:
 
 Mỗi vai trò sẽ có tập quyền khác nhau.
 
----
-
 ### Hierarchical Permissions
 
 Quyền được kế thừa theo cấu trúc tổ chức.
@@ -79,21 +71,15 @@ Ví dụ:
 - Trưởng khoa có quyền cao hơn giảng viên.
 - Giảng viên có quyền cao hơn trợ giảng.
 
----
-
 ### Administrative Override
 
 Quản trị viên có thể ghi đè các quy tắc phân quyền thông thường để xử lý các trường hợp đặc biệt.
-
----
 
 ### Explicit Deny
 
 Nếu tồn tại một chính sách từ chối (Deny), chính sách đó sẽ luôn được ưu tiên cao nhất.
 
 Điều này giúp hạn chế các rủi ro truy cập ngoài ý muốn.
-
----
 
 ## Ví dụ minh họa
 
@@ -113,8 +99,6 @@ Tuy nhiên, toàn bộ logic phân quyền đều được quản lý tập trun
 
 Điều này giúp việc mở rộng hoặc thay đổi chính sách trở nên đơn giản hơn rất nhiều.
 
----
-
 ## Những điểm mình thấy đáng chú ý
 
 Sau khi đọc bài viết, điều mình ấn tượng nhất là AWS đã tách riêng **Authentication** và **Authorization** thành hai lớp hoàn toàn độc lập.
@@ -127,15 +111,11 @@ Sau khi đọc bài viết, điều mình ấn tượng nhất là AWS đã tác
 - Tăng khả năng kiểm toán và quản trị quyền truy cập.
 - Phù hợp với các hệ thống SaaS hoặc B2C có nhiều người dùng và nhiều cấp quyền khác nhau.
 
----
-
 ## Tổng kết
 
 Theo mình, **Amazon Cognito** và **Amazon Verified Permissions** là hai dịch vụ bổ trợ rất tốt cho nhau trong việc xây dựng hệ thống xác thực và phân quyền hiện đại.
 
 Đối với những ứng dụng B2C cần kiểm soát quyền truy cập chi tiết nhưng vẫn đảm bảo khả năng mở rộng trong tương lai, đây là một kiến trúc rất đáng để tham khảo.
-
----
 
 # Tài liệu tham khảo
 

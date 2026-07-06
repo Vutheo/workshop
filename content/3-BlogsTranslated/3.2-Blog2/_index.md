@@ -21,8 +21,6 @@ Amazon Cognito has long been a popular service for user registration, sign-in, a
 
 To address this challenge, AWS introduced **Amazon Verified Permissions**.
 
----
-
 ## How Amazon Verified Permissions Works
 
 Amazon Verified Permissions is a centralized authorization service powered by the **Cedar policy language**.
@@ -38,8 +36,6 @@ The architecture presented by AWS works as follows:
 
 Separating authentication from authorization makes the application much easier to maintain and evolve over time.
 
----
-
 ## Common Authorization Models
 
 The AWS article introduces several authorization models commonly used in enterprise applications.
@@ -52,8 +48,6 @@ Examples include:
 
 - Updating personal profiles.
 - Editing documents they created.
-
----
 
 ### Role-Based Access Control (RBAC)
 
@@ -68,8 +62,6 @@ Examples include:
 
 Each role has its own set of permissions.
 
----
-
 ### Hierarchical Permissions
 
 Permissions are inherited through organizational hierarchy.
@@ -79,21 +71,15 @@ For example:
 - Department Chairs have broader permissions than Faculty members.
 - Faculty members have broader permissions than Teaching Assistants.
 
----
-
 ### Administrative Override
 
 Administrators can override standard authorization rules when necessary.
-
----
 
 ### Explicit Deny
 
 If a Deny policy exists, it always takes precedence over Allow policies.
 
 This helps prevent unintended access.
-
----
 
 ## Example Scenario
 
@@ -113,8 +99,6 @@ Instead of embedding authorization logic throughout the application, all access 
 
 This approach significantly simplifies future policy updates and system maintenance.
 
----
-
 ## My Thoughts
 
 What impressed me most about this architecture is the clear separation between **Authentication** and **Authorization**.
@@ -127,15 +111,11 @@ For systems with multiple user groups and complex access rules, this design prov
 - Better auditing and centralized permission management.
 - Well suited for SaaS and large-scale B2C applications.
 
----
-
 ## Final Thoughts
 
 In my opinion, **Amazon Cognito** and **Amazon Verified Permissions** complement each other very well for building modern authentication and authorization systems.
 
 For B2C applications that require fine-grained access control while remaining scalable as they grow, this architecture is definitely worth considering.
-
----
 
 # References
 
