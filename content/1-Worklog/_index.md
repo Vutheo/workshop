@@ -8,9 +8,9 @@ pre: " <b> 1. </b> "
 
 ## Introduction
 
-During the **First Cloud AI Journey (FCAJ)** program, I spent **12 weeks** learning AWS services, practicing cloud technologies, and developing the **AIAssistant** project. Throughout the internship, I gradually gained experience in AWS Cloud services, Serverless architecture, AI integration, security, and application deployment on AWS.
+During the **First Cloud AI Journey (FCAJ)** program, I spent **12 weeks** learning AWS services, practicing cloud technologies, and developing the **AI Assistant** project. Throughout the internship, I gradually gained experience in AWS Cloud services, Serverless architecture, AI integration, security, and application deployment on AWS.
 
-In addition to completing AWS Study Group learning materials and workshops, I collaborated with my teammates to build the **AIAssistant** system from the initial planning stage to architecture design, frontend and backend development, deployment, security testing, and final project documentation.
+In addition to completing AWS Study Group learning materials and workshops, I collaborated with my teammates to build the **AI Assistant** system from the initial planning stage to architecture design, frontend and backend development, deployment, security testing, and final project documentation.
 
 The following sections summarize my weekly worklog throughout the internship.
 
@@ -24,7 +24,7 @@ The following sections summarize my weekly worklog throughout the internship.
 
 **Week 4:** [Practicing AWS services, attending FCAJ Community Day, and selecting technologies for the project](1.4-week4/)
 
-**Week 5:** [Designing the Serverless architecture, planning the AIAssistant project, and developing the website interface](1.5-week5/)
+**Week 5:** [Designing the Serverless architecture, planning the AI Assistant project, and developing the website interface](1.5-week5/)
 
 **Week 6:** [Learning Amazon Cognito and API Gateway, improving the website, and attending FCAJ Community Day](1.6-week6/)
 

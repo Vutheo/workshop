@@ -47,7 +47,7 @@ Quy trình xử lý gồm:
 
 Ở bước này mô hình chỉ mới có phần khung (mesh), chưa có texture.
 
-## Bước 2 - Sinh Texture Đa Góc Nhìn
+## Bước 2 - Sinh Texture đa góc nhìn
 
 Sau khi có mesh, bước tiếp theo là phủ texture.
 
