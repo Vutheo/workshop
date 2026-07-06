@@ -8,7 +8,8 @@ pre: " <b> 1. </b> "
 
 ## Giới thiệu
 
-Trong suốt chương trình **First Cloud AI Journey (FCAJ)**, tôi đã tham gia học tập, thực hành và phát triển dự án **AI Assistant** trong thời gian **12 tuần**. Quá trình thực tập giúp tôi từng bước tiếp cận các dịch vụ của AWS, tìm hiểu kiến trúc Cloud, phát triển ứng dụng theo mô hình Serverless và áp dụng các kiến thức về AI, bảo mật cũng như triển khai hệ thống trên nền tảng AWS.
+Trong suốt chương trình **First Cloud AI Journey (FCAJ)**, tôi đã tham gia học tập, thực hành và phát triển dự án **AI
+Assistant** trong thời gian **12 tuần**. Quá trình thực tập giúp tôi từng bước tiếp cận các dịch vụ của AWS, tìm hiểu kiến trúc Cloud, phát triển ứng dụng theo mô hình Serverless và áp dụng các kiến thức về AI, bảo mật cũng như triển khai hệ thống trên nền tảng AWS.
 
 Bên cạnh việc học tập thông qua các khóa học và workshop của AWS Study Group, tôi còn phối hợp cùng các thành viên trong nhóm để xây dựng dự án **AI Assistant**, từ giai đoạn lên ý tưởng, thiết kế kiến trúc, phát triển giao diện, triển khai Backend, đến kiểm thử bảo mật và hoàn thiện báo cáo đồ án.
 
