@@ -20,8 +20,6 @@ During my participation in the **First Cloud AI Journey**, I had the opportunity
 
 &emsp;**Description:** Focused on effective learning strategies, career orientation in IT and Cloud Computing, and applying AI to the software development process through the Builder AI Mindset.
 
----
-
 ### [Event 2](4.2-Event2/)
 
 &emsp;**Event Name:** FCAJ Community Day
@@ -33,8 +31,6 @@ During my participation in the **First Cloud AI Journey**, I had the opportunity
 &emsp;**Role:** Participant
 
 &emsp;**Description:** Covered topics including Prompt Engineering, AI Agents, Amazon Q, Multi-Agent Systems, Amazon CloudFront optimization, Hackathon experiences, and enterprise AI implementation.
-
----
 
 ### [Event 3](4.3-Event3/)
 

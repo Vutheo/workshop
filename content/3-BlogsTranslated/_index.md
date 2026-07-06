@@ -10,13 +10,9 @@ pre: " <b> 3. </b> "
 
 This blog introduces **Amazon Nova Act**, an AI Agent service from AWS that enables browser automation using natural language instead of traditional XPath or CSS selectors. It discusses the limitations of conventional web automation tools, explains how Nova Act works, demonstrates its workflow from the Playground to the Python SDK and AWS deployment, and highlights key features such as Human-in-the-Loop (HITL), Observability, and Enterprise Security.
 
----
-
 ### [Blog 2 - Building a Secure B2C Application with Amazon Cognito and Amazon Verified Permissions](3.2-Blog2/)
 
 This blog explains how to build secure B2C applications by combining **Amazon Cognito** with **Amazon Verified Permissions**. It covers the differences between authentication and authorization, the AWS architecture for fine-grained access control, common authorization models, and the advantages, scalability, and cost considerations of the solution.
-
----
 
 ### [Blog 3 - Creating 3D Assets from 2D Images Using AI on AWS](3.3-Blog3/)
 

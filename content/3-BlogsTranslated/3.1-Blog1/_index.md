@@ -1,8 +1,9 @@
 ---
-title: "Exploring Amazon Nova Act: AI-Powered UI Automation Without Fixing XPath"
+title: "Blog 1"
 date: 2026-06-05
 weight: 1
 chapter: false
+pre: " <b> 3.1. </b> "
 ---
 
 # Exploring Amazon Nova Act: AI-Powered UI Automation Without Fixing XPath
@@ -12,8 +13,6 @@ chapter: false
 Today I'd like to share my experience with an automation service that I recently discovered and had the opportunity to explore. I had been struggling with writing UI automation scripts for my team's project. The biggest challenge was that the frontend team kept updating the user interface, causing my Selenium scripts to break because selectors or XPath expressions could no longer locate the target elements.
 
 Just when I was about to give up, I came across **Amazon Nova Act**. At first, I assumed it was simply another AI wrapper around Selenium. However, after trying it on my own automation tasks, I realized it was fundamentally different. In this article, I'd like to share my experience and review why I believe Amazon Nova Act is a promising solution for modern UI automation.
-
----
 
 ## The Pain of Traditional Web Automation
 
@@ -41,8 +40,6 @@ These tools all rely on locating HTML elements using:
 The problem is that even a small frontend update—such as changing a CSS class, restructuring HTML, or moving a button—can immediately break the automation scripts.
 
 Maintaining these scripts often becomes the most time-consuming part of UI automation.
-
----
 
 ## How Does Amazon Nova Act Solve This Problem?
 
@@ -76,8 +73,6 @@ Rather than memorizing XPath expressions, the model learns to interpret the visu
 
 AWS reports that Nova Act achieves **over 90% accuracy** on real-world benchmark tasks.
 
----
-
 # From Playground to Production
 
 ## Step 1. Trying the Playground
@@ -103,8 +98,6 @@ You can watch it:
 - navigate between pages
 
 all in real time.
-
----
 
 ## Step 2. Developing with the Python SDK
 
@@ -144,8 +137,6 @@ Nova Act handles the browser interactions.
 
 The VS Code extension also provides **Live Debugging**, allowing you to watch each browser action directly inside the editor.
 
----
-
 ## Step 3. Deploying to AWS
 
 Once development is complete, deployment is surprisingly simple.
@@ -160,8 +151,6 @@ Nova Act automatically:
 Each workflow runs inside its own isolated browser sandbox.
 
 This allows hundreds of concurrent automation sessions without managing Chrome Headless, EC2 instances, or custom infrastructure.
-
----
 
 # Three Standout Features of Nova Act
 
@@ -187,8 +176,6 @@ An administrator can:
 
 This significantly improves reliability for long-running automation tasks.
 
----
-
 ## Observability
 
 Nova Act provides excellent visibility into every automation run.
@@ -202,8 +189,6 @@ to verify exactly what the AI did during execution.
 
 This makes debugging much easier compared to traditional automation tools.
 
----
-
 ## Enterprise-Grade Security
 
 All workflows execute inside isolated AWS sandbox environments.
@@ -216,8 +201,6 @@ Organizations can leverage:
 - isolated execution environments
 
 making Nova Act suitable for enterprise-scale deployments.
-
----
 
 # My Thoughts
 
@@ -241,8 +224,6 @@ If you're working in areas such as:
 - AI Agents
 
 I believe Amazon Nova Act is definitely worth exploring.
-
----
 
 # References
 

@@ -20,8 +20,6 @@ Trong quá trình tham gia **First Cloud AI Journey**, em đã có cơ hội tha
 
 &emsp;**Nội dung:** Chia sẻ về phương pháp học tập hiệu quả, định hướng nghề nghiệp trong lĩnh vực IT/Cloud và cách ứng dụng AI vào quy trình phát triển phần mềm thông qua Builder AI Mindset.
 
----
-
 ### [Event 2](4.2-Event2/)
 
 &emsp;**Tên sự kiện:** FCAJ Community Day
@@ -33,8 +31,6 @@ Trong quá trình tham gia **First Cloud AI Journey**, em đã có cơ hội tha
 &emsp;**Vai trò trong sự kiện:** Người tham dự
 
 &emsp;**Nội dung:** Tập trung vào các chủ đề về Prompt Engineering, AI Agent, Amazon Q, Multi-Agent System, tối ưu CloudFront, kinh nghiệm Hackathon và triển khai AI trong môi trường doanh nghiệp.
-
----
 
 ### [Event 3](4.3-Event3/)
 

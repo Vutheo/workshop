@@ -10,13 +10,9 @@ pre: " <b> 3. </b> "
 
 Bài viết giới thiệu **Amazon Nova Act**, dịch vụ AI Agent của AWS hỗ trợ tự động hóa các thao tác trên trình duyệt bằng ngôn ngữ tự nhiên. Nội dung phân tích những hạn chế của các công cụ Web Automation truyền thống, cách Nova Act hoạt động, quy trình sử dụng từ Playground đến Python SDK và triển khai trên AWS, cùng các tính năng như Human-in-the-Loop (HITL), Observability và Enterprise Security.
 
----
-
 ### [Blog 2 - Building a Secure B2C Application with Amazon Cognito and Amazon Verified Permissions](3.2-Blog2/)
 
 Bài viết trình bày cách xây dựng ứng dụng B2C an toàn bằng cách kết hợp **Amazon Cognito** và **Amazon Verified Permissions**. Nội dung giải thích sự khác biệt giữa Authentication và Authorization, kiến trúc phân quyền của AWS, các mô hình kiểm soát truy cập phổ biến, đồng thời đánh giá ưu điểm, chi phí và khả năng mở rộng của giải pháp.
-
----
 
 ### [Blog 3 - Creating 3D Assets from 2D Images Using AI on AWS](3.3-Blog3/)
 

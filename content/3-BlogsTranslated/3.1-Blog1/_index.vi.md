@@ -1,8 +1,9 @@
 ---
-title: "Trải nghiệm Amazon Nova Act: Tự động hóa UI bằng AI, không lo fix XPath"
+title: "Blog 1"
 date: 2026-06-05
 weight: 1
 chapter: false
+pre: " <b> 3.1. </b> "
 ---
 
 # Trải nghiệm Amazon Nova Act: Tự động hóa UI bằng AI, không lo fix XPath
@@ -12,8 +13,6 @@ chapter: false
 Hôm nay mình muốn chia sẻ với mọi người về một dịch vụ automation mà mình mới tìm thấy và có dịp trải nghiệm gần đây. Chuyện là mình đang "sấp mặt" với task viết script automation để test UI cho project nhóm. Khổ nỗi là phía Frontend liên tục cập nhật giao diện, khiến các script Selenium của mình cứ chạy được một lúc lại lỗi vì không tìm thấy Selector hoặc XPath.
 
 Trong lúc gần như muốn bỏ cuộc thì mình biết đến **Amazon Nova Act**. Ban đầu mình nghĩ đây cũng chỉ là một lớp AI bọc quanh Selenium. Nhưng sau khi thử áp dụng vào đúng bài toán của mình thì nhận ra nó khác hoàn toàn. Hôm nay mình sẽ chia sẻ trải nghiệm và review chi tiết về dịch vụ automation rất hứa hẹn này.
-
----
 
 ## Nỗi khổ của Web Automation truyền thống
 
@@ -41,8 +40,6 @@ Thông thường mình sử dụng các công cụ như:
 Vấn đề là chỉ cần Frontend đổi một class CSS, đổi cấu trúc HTML hoặc di chuyển một nút bấm sang vị trí khác thì toàn bộ script gần như phải sửa lại.
 
 Đó là công việc tốn thời gian nhất khi làm UI Automation.
-
----
 
 ## Amazon Nova Act giải quyết bài toán này như thế nào?
 
@@ -76,8 +73,6 @@ Thay vì ghi nhớ XPath, mô hình học cách quan sát giao diện và đưa 
 
 Theo AWS công bố, Nova Act đạt độ chính xác hơn **90%** trên các bài đánh giá thực tế.
 
----
-
 # Từ Playground đến Production
 
 ## Bước 1. Trải nghiệm trên Playground
@@ -103,8 +98,6 @@ Bạn có thể quan sát toàn bộ quá trình:
 - chuyển trang
 
 theo thời gian thực.
-
----
 
 ## Bước 2. Viết code bằng Python SDK
 
@@ -144,8 +137,6 @@ Nova Act xử lý UI.
 
 Extension còn hỗ trợ **Live Debug** ngay trong VS Code bằng trình duyệt nhúng.
 
----
-
 ## Bước 3. Deploy lên AWS
 
 Khi hoàn thành chương trình, việc triển khai khá đơn giản.
@@ -160,8 +151,6 @@ Nova Act sẽ:
 Mỗi workflow sẽ được thực thi trong một Browser Sandbox riêng biệt.
 
 Bạn có thể mở rộng lên hàng trăm phiên chạy đồng thời mà không cần tự quản lý Chrome Headless hay EC2.
-
----
 
 # Ba tính năng nổi bật của Nova Act
 
@@ -185,8 +174,6 @@ Quản trị viên chỉ cần:
 - xử lý CAPTCHA
 - AI tiếp tục chạy phần còn lại.
 
----
-
 ## Observability
 
 Nova Act cho phép theo dõi toàn bộ quá trình thực thi.
@@ -200,8 +187,6 @@ Bạn có thể xem:
 
 Điều này rất hữu ích khi debug.
 
----
-
 ## Enterprise Security
 
 Toàn bộ workflow được chạy trong môi trường sandbox của AWS.
@@ -214,8 +199,6 @@ Có thể:
 - cô lập dữ liệu giữa các workflow
 
 rất phù hợp với môi trường doanh nghiệp.
-
----
 
 # Đánh giá cá nhân
 
@@ -237,8 +220,6 @@ Nếu bạn đang làm:
 - AI Agent
 
 thì mình nghĩ Nova Act là một dịch vụ rất đáng để trải nghiệm.
-
----
 
 # Tài liệu tham khảo
 
