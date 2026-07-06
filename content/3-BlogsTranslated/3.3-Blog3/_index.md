@@ -14,8 +14,6 @@ Recently, I came across an interesting AWS GameTech article about building a com
 
 In this article, I'd like to summarize the proposed architecture and share several implementation notes that I found useful during my research.
 
----
-
 ## System Architecture Overview
 
 The proposed workflow separates the generation process into two GPU-intensive stages in order to balance performance and infrastructure cost.
@@ -36,8 +34,6 @@ It stores:
 
 This makes each processing stage independent while simplifying data management.
 
----
-
 ## Step 1 — Generate the 3D Mesh
 
 The first stage runs on an **Amazon EC2 g4dn.2xlarge** instance equipped with an NVIDIA GPU.
@@ -53,8 +49,6 @@ At this stage, only the object's geometry is created.
 
 No textures have been applied yet.
 
----
-
 ## Step 2 — Multi-view Texture Generation
 
 The second stage requires significantly more GPU memory.
@@ -69,8 +63,6 @@ This stage uses **MV-Adapter** to:
 
 The output is a fully textured 3D asset ready for further optimization.
 
----
-
 # Deploying the Workflow on AWS
 
 The first step is selecting the appropriate AWS infrastructure.
@@ -84,8 +76,6 @@ Using AWS Deep Learning AMIs is highly recommended because they already include:
 
 This significantly reduces environment setup time.
 
----
-
 ## Cost Optimization Tips
 
 GPU instances such as **g4dn** and **g6e** provide excellent performance but are relatively expensive when billed hourly.
@@ -97,8 +87,6 @@ For students and early-career developers, AWS frequently organizes programs such
 - AWS Study Group events
 
 Completing the hands-on challenges often rewards participants with **AWS Credits**, which can substantially reduce the cost of experimenting with GPU-based AI workloads during research and development.
-
----
 
 # Repairing AI-generated Meshes
 
@@ -132,8 +120,6 @@ python -m scripts.texture_i2tex \
 
 Repairing the mesh first greatly improves the stability of the entire workflow.
 
----
-
 # Bringing AI Assets into a Game Engine
 
 Many tutorials stop once the `.glb` file has been generated.
@@ -157,8 +143,6 @@ A common workflow includes:
 
 After these steps, the asset becomes suitable for integration into engines such as Unity or Unreal Engine.
 
----
-
 # Final Thoughts
 
 Running open-source AI models such as **TripoSG** and **MV-Adapter** on AWS gives developers full control over the entire 3D asset generation pipeline without depending on third-party APIs.
@@ -168,8 +152,6 @@ Although AI-generated assets still cannot completely replace professional 3D art
 By automating the creation of initial 3D assets, developers can spend less time producing placeholder models and more time focusing on gameplay design, programming, and game mechanics.
 
 For indie developers and AI enthusiasts, this represents an exciting workflow that combines Generative AI, GPU computing, and cloud infrastructure into a practical game development pipeline.
-
----
 
 # References
 
