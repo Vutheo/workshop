@@ -6,133 +6,137 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Xây dựng ứng dụng B2C an toàn với Amazon Cognito và Amazon Verified Permissions
+# Xây Dựng Ứng Dụng B2C An Toàn Với Amazon Cognito Và Amazon Verified Permissions
 
-Trong các ứng dụng B2C hiện đại, việc quản lý người dùng không chỉ dừng lại ở việc đăng nhập mà còn bao gồm kiểm soát quyền truy cập đến từng tài nguyên cụ thể.
+![Amazon Cognito & Verified Permissions](/images/3-Blog/blog2.jpg)
 
-Thông thường, hệ thống phải xử lý hai vấn đề chính:
+Trong quá trình tìm hiểu về bảo mật cho các ứng dụng B2C, mình có đọc được một bài viết khá hay từ AWS Security Blog về cách kết hợp **Amazon Cognito** và **Amazon Verified Permissions** để triển khai cơ chế phân quyền chi tiết (*fine-grained access control*) cho ứng dụng.
 
-- **Authentication:** Xác thực người dùng là ai  
-- **Authorization:** Người dùng được phép làm gì  
+Thông thường khi xây dựng một hệ thống, chúng ta sẽ phải giải quyết hai bài toán riêng biệt:
 
-AWS đề xuất kết hợp **Amazon Cognito** và **Amazon Verified Permissions** để tách biệt hai phần này, giúp hệ thống rõ ràng và dễ mở rộng hơn.
+- **Authentication (Xác thực):** Người dùng là ai?
+- **Authorization (Phân quyền):** Người dùng được phép thực hiện những hành động nào?
 
----
+Amazon Cognito từ lâu đã là dịch vụ quen thuộc để quản lý đăng ký, đăng nhập và xác thực người dùng. Tuy nhiên, khi hệ thống ngày càng có nhiều vai trò người dùng, nhiều loại tài nguyên và các quy tắc truy cập phức tạp hơn, việc xử lý toàn bộ logic phân quyền ngay trong source code sẽ khiến ứng dụng khó bảo trì và khó mở rộng.
 
-## Vấn đề của cách làm truyền thống
-
-Trong nhiều ứng dụng, logic phân quyền thường được viết trực tiếp trong code:
-
-- Khó mở rộng khi số lượng role tăng
-- Khó bảo trì khi rule phức tạp
-- Dễ bị phân tán logic authorization
-
-Khi hệ thống phát triển lớn hơn, cách tiếp cận này không còn phù hợp.
+AWS đã giới thiệu **Amazon Verified Permissions** để giải quyết bài toán này.
 
 ---
 
-## Giải pháp của AWS
+## Amazon Verified Permissions hoạt động như thế nào?
 
-AWS đưa ra kiến trúc tách biệt:
+Amazon Verified Permissions là dịch vụ quản lý quyền truy cập tập trung, sử dụng ngôn ngữ chính sách **Cedar**.
 
-- **Amazon Cognito:** xử lý đăng nhập và cấp JWT token
-- **Amazon Verified Permissions (AVP):** đánh giá quyền truy cập dựa trên policy
+Thay vì viết hàng loạt câu lệnh `if...else` hoặc hard-code các điều kiện phân quyền trong ứng dụng, toàn bộ quy tắc truy cập sẽ được định nghĩa dưới dạng các **Policy** riêng biệt.
 
-Thay vì viết logic trong code, ta định nghĩa policy riêng bằng **Cedar language** và để AVP xử lý quyết định.
+Trong kiến trúc được AWS giới thiệu:
 
----
+1. Người dùng đăng nhập thông qua **Amazon Cognito**.
+2. Cognito xác thực danh tính và phát hành **JWT Token**.
+3. Khi người dùng gửi yêu cầu đến hệ thống, ứng dụng sẽ chuyển thông tin người dùng cùng hành động cần thực hiện đến **Amazon Verified Permissions**.
+4. Verified Permissions đánh giá các **Cedar Policy** và trả về kết quả cho phép hoặc từ chối truy cập.
 
-## Luồng hoạt động hệ thống
-
-**(Chèn hình tại đây: Architecture Diagram)**  
- *Hình 1: Luồng Cognito + Verified Permissions*
-
-Luồng xử lý cơ bản:
-
-1. User đăng nhập qua Amazon Cognito  
-2. Cognito trả về JWT token  
-3. Application gửi request kèm token  
-4. Backend gọi Amazon Verified Permissions  
-5. AVP đánh giá policy  
-6. Trả về Allow / Deny  
+Việc tách riêng phần xác thực và phân quyền giúp ứng dụng trở nên linh hoạt và dễ quản lý hơn.
 
 ---
 
-## Các mô hình phân quyền hỗ trợ
+## Các mô hình phân quyền phổ biến
 
-Giải pháp hỗ trợ nhiều kiểu authorization phổ biến:
+Bài viết của AWS giới thiệu nhiều mô hình phân quyền thường gặp trong các hệ thống doanh nghiệp.
 
-- **Resource-based access:** user chỉ truy cập tài nguyên của mình  
-- **Role-based access (RBAC):** phân quyền theo vai trò  
-- **Hierarchical access:** phân cấp quyền theo tổ chức  
-- **Explicit deny:** luôn ưu tiên deny  
-- **Admin override:** admin có quyền cao hơn  
+### Resource Ownership
 
----
+Người dùng chỉ được thao tác trên dữ liệu do chính mình sở hữu.
 
-## Lợi ích chính
+Ví dụ:
 
-Giải pháp này mang lại nhiều lợi ích rõ ràng:
-
-- Tách biệt authentication và authorization  
-- Giảm logic phân quyền trong application code  
-- Dễ thay đổi policy mà không cần deploy lại hệ thống  
-- Tăng khả năng audit và quản lý quyền tập trung  
-- Phù hợp hệ thống B2C / SaaS nhiều người dùng  
+- Chỉnh sửa hồ sơ cá nhân.
+- Cập nhật tài liệu của bản thân.
 
 ---
 
-### Amazon Cognito
-- Tính theo **Monthly Active Users (MAU)**  
-- Chi phí tăng theo số lượng người dùng  
+### Role-Based Access Control (RBAC)
 
-### Amazon Verified Permissions
-- Tính theo số lượng request đánh giá policy  
-- Hệ thống càng nhiều request → chi phí càng cao  
+Quyền truy cập được xác định dựa trên vai trò.
 
-- Với hệ thống nhỏ: chi phí thấp  
-- Với hệ thống lớn: cần tối ưu số lần gọi AVP  
+Ví dụ:
 
----
+- Student
+- Faculty
+- Teaching Assistant
+- Administrator
 
-### 1. So với phân quyền trong code
-
-| Tiêu chí | Code-based | Cognito + AVP |
-|----------|------------|----------------|
-| Bảo trì | Khó | Dễ hơn |
-| Mở rộng | Kém | Tốt |
-| Audit | Khó | Rõ ràng |
-| Thay đổi rule | Phải deploy | Không cần deploy |
+Mỗi vai trò sẽ có tập quyền khác nhau.
 
 ---
 
-### 2. So với IAM
+### Hierarchical Permissions
 
-- IAM phù hợp cho system-to-system  
-- AVP phù hợp cho application/B2C authorization  
+Quyền được kế thừa theo cấu trúc tổ chức.
 
----
+Ví dụ:
 
-### 3. Cách kiểm thử
-
-Có thể test theo:
-
-- Unit test policy Cedar  
-- Test role (Admin/User/Guest)  
-- Integration test Cognito → AVP  
-- Scenario test theo use case thực tế  
+- Trưởng khoa có quyền cao hơn giảng viên.
+- Giảng viên có quyền cao hơn trợ giảng.
 
 ---
 
-## Kết luận
+### Administrative Override
 
-Việc kết hợp **Amazon Cognito** và **Amazon Verified Permissions** giúp xây dựng hệ thống B2C theo hướng hiện đại hơn:
-
-> Tách biệt authentication và authorization, giúp hệ thống dễ mở rộng và dễ quản lý.
-
-Tuy nhiên, cần chú ý tối ưu chi phí khi hệ thống có lượng request lớn.
+Quản trị viên có thể ghi đè các quy tắc phân quyền thông thường để xử lý các trường hợp đặc biệt.
 
 ---
 
-### Nguồn tham khảo
-https://aws.amazon.com/blogs/security/building-secure-b2c-applications-with-fine-grained-access-control-using-amazon-cognito-and-amazon-verified-permissions/
+### Explicit Deny
+
+Nếu tồn tại một chính sách từ chối (Deny), chính sách đó sẽ luôn được ưu tiên cao nhất.
+
+Điều này giúp hạn chế các rủi ro truy cập ngoài ý muốn.
+
+---
+
+## Ví dụ minh họa
+
+AWS sử dụng ví dụ về một hệ thống quản lý học thuật.
+
+Các vai trò bao gồm:
+
+- Student
+- Teaching Assistant
+- Faculty
+- Department Chair
+- Administrator
+
+Mỗi vai trò có phạm vi truy cập khác nhau.
+
+Tuy nhiên, toàn bộ logic phân quyền đều được quản lý tập trung thông qua Amazon Verified Permissions thay vì viết trực tiếp trong ứng dụng.
+
+Điều này giúp việc mở rộng hoặc thay đổi chính sách trở nên đơn giản hơn rất nhiều.
+
+---
+
+## Những điểm mình thấy đáng chú ý
+
+Sau khi đọc bài viết, điều mình ấn tượng nhất là AWS đã tách riêng **Authentication** và **Authorization** thành hai lớp hoàn toàn độc lập.
+
+Đối với các hệ thống có nhiều nhóm người dùng hoặc nhiều quy tắc truy cập khác nhau, cách tiếp cận này mang lại nhiều lợi ích:
+
+- Tách biệt hoàn toàn Authentication và Authorization.
+- Giảm đáng kể lượng code phân quyền trong ứng dụng.
+- Dễ dàng cập nhật chính sách mà không cần sửa logic nghiệp vụ.
+- Tăng khả năng kiểm toán và quản trị quyền truy cập.
+- Phù hợp với các hệ thống SaaS hoặc B2C có nhiều người dùng và nhiều cấp quyền khác nhau.
+
+---
+
+## Tổng kết
+
+Theo mình, **Amazon Cognito** và **Amazon Verified Permissions** là hai dịch vụ bổ trợ rất tốt cho nhau trong việc xây dựng hệ thống xác thực và phân quyền hiện đại.
+
+Đối với những ứng dụng B2C cần kiểm soát quyền truy cập chi tiết nhưng vẫn đảm bảo khả năng mở rộng trong tương lai, đây là một kiến trúc rất đáng để tham khảo.
+
+---
+
+# Tài liệu tham khảo
+
+- AWS Security Blog: https://aws.amazon.com/blogs/security/building-secure-b2c-applications-with-fine-grained-access-control-using-amazon-cognito-and-amazon-verified-permissions/

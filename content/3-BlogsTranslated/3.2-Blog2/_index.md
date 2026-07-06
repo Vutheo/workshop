@@ -6,138 +6,137 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Building a secure B2C application with Amazon Cognito and Amazon Verified Permissions
+# Building Secure B2C Applications with Amazon Cognito and Amazon Verified Permissions
 
-In modern B2C applications, user management is not only about authentication but also about controlling access to specific resources.
+![Amazon Cognito & Verified Permissions](/images/3-Blog/blog2.jpg)
 
-Typically, systems must handle two core problems:
+While learning about security architectures for B2C applications, I came across an interesting article from the AWS Security Blog that explains how **Amazon Cognito** and **Amazon Verified Permissions** can be combined to implement fine-grained access control.
+
+When building an application, developers usually need to solve two separate problems:
 
 - **Authentication:** Who is the user?
 - **Authorization:** What is the user allowed to do?
 
-AWS proposes combining **Amazon Cognito** and **Amazon Verified Permissions** to separate these two concerns, making the system clearer and more scalable.
+Amazon Cognito has long been a popular service for user registration, sign-in, and authentication. However, as applications grow with more user roles, resources, and access rules, implementing all authorization logic directly in the application code quickly becomes difficult to maintain and scale.
+
+To address this challenge, AWS introduced **Amazon Verified Permissions**.
 
 ---
 
-## Problems with the traditional approach
+## How Amazon Verified Permissions Works
 
-In many applications, authorization logic is often written directly in the code:
+Amazon Verified Permissions is a centralized authorization service powered by the **Cedar policy language**.
 
-- Difficult to scale when the number of roles increases
-- Hard to maintain as rules become more complex
-- Authorization logic becomes scattered across the application
+Instead of scattering authorization logic throughout the application using numerous conditional statements, developers define access rules as reusable authorization policies.
 
-As the system grows, this approach becomes less efficient and harder to manage.
+The architecture presented by AWS works as follows:
 
----
+1. Users authenticate through **Amazon Cognito**.
+2. Cognito issues a **JWT token** after successful authentication.
+3. When users request access to resources, the application forwards the request along with user information to **Amazon Verified Permissions**.
+4. Verified Permissions evaluates the request against the configured **Cedar Policies** and returns either an Allow or Deny decision.
 
-## AWS proposed solution
-
-AWS introduces a decoupled architecture:
-
-- **Amazon Cognito:** handles user authentication and issues JWT tokens
-- **Amazon Verified Permissions (AVP):** evaluates access control policies based on authorization rules
-
-Instead of embedding authorization logic in code, policies are defined using the **Cedar language**, and AVP evaluates them at runtime.
+Separating authentication from authorization makes the application much easier to maintain and evolve over time.
 
 ---
 
-## System workflow
+## Common Authorization Models
 
-**(Insert image here: Architecture Diagram)**  
-*Figure 1: Cognito and Verified Permissions flow*
+The AWS article introduces several authorization models commonly used in enterprise applications.
 
-The basic flow is as follows:
+### Resource Ownership
 
-1. User signs in via Amazon Cognito  
-2. Cognito issues a JWT token  
-3. Application sends a request with the token  
-4. Backend calls Amazon Verified Permissions  
-5. AVP evaluates the policy  
-6. Returns an Allow / Deny decision  
+Users can only manage resources they own.
 
----
+Examples include:
 
-## Supported authorization models
-
-This solution supports multiple common authorization patterns:
-
-- **Resource-based access:** users can only access their own resources  
-- **Role-based access (RBAC):** permissions are assigned based on roles  
-- **Hierarchical access control:** permissions are inherited across organizational levels  
-- **Explicit deny:** deny rules always take priority  
-- **Admin override:** administrators can override standard access rules  
+- Updating personal profiles.
+- Editing documents they created.
 
 ---
 
-## Key benefits
+### Role-Based Access Control (RBAC)
 
-This architecture provides several important benefits:
+Permissions are assigned based on user roles.
 
-- Clear separation of authentication and authorization  
-- Reduced authorization logic inside application code  
-- Easier policy updates without redeploying the system  
-- Improved auditability and centralized access control  
-- Suitable for B2C and SaaS applications with large user bases  
+Examples include:
 
----
+- Student
+- Faculty
+- Teaching Assistant
+- Administrator
 
-## AWS services overview
-
-### Amazon Cognito
-- Pricing is based on **Monthly Active Users (MAU)**  
-- Costs scale with the number of active users  
-
-### Amazon Verified Permissions
-- Pricing is based on the number of policy evaluation requests  
-- Higher request volume leads to higher cost  
-
-- Small systems: low cost  
-- Large systems: requires optimization of AVP calls to control cost  
+Each role has its own set of permissions.
 
 ---
 
-## Testing and evaluation
+### Hierarchical Permissions
 
-### 1. Comparison with code-based authorization
+Permissions are inherited through organizational hierarchy.
 
-| Criteria | Code-based | Cognito + AVP |
-|----------|------------|---------------|
-| Maintainability | Low | High |
-| Scalability | Limited | High |
-| Auditability | Poor | Strong |
-| Rule updates | Requires redeployment | No redeployment needed |
+For example:
+
+- Department Chairs have broader permissions than Faculty members.
+- Faculty members have broader permissions than Teaching Assistants.
 
 ---
 
-### 2. Comparison with IAM
+### Administrative Override
 
-- IAM is more suitable for system-to-system access control  
-- AVP is designed for application-level (B2C) authorization  
-
----
-
-### 3. Testing approach
-
-This solution can be tested in multiple ways:
-
-- Unit testing for Cedar policies  
-- Role-based testing (Admin/User/Guest)  
-- Integration testing between Cognito → AVP → backend  
-- Scenario-based testing for real-world use cases  
+Administrators can override standard authorization rules when necessary.
 
 ---
 
-## Conclusion
+### Explicit Deny
 
-Combining **Amazon Cognito** and **Amazon Verified Permissions** enables a modern and scalable B2C security architecture.
+If a Deny policy exists, it always takes precedence over Allow policies.
 
-> It clearly separates authentication and authorization, making the system easier to maintain and extend.
-
-However, cost optimization should be considered when the system has a high volume of authorization requests.
+This helps prevent unintended access.
 
 ---
 
-## References
+## Example Scenario
 
-https://aws.amazon.com/blogs/security/building-secure-b2c-applications-with-fine-grained-access-control-using-amazon-cognito-and-amazon-verified-permissions/
+AWS demonstrates these concepts using an academic management system.
+
+The application contains several roles:
+
+- Student
+- Teaching Assistant
+- Faculty
+- Department Chair
+- Administrator
+
+Each role has different permissions.
+
+Instead of embedding authorization logic throughout the application, all access decisions are managed centrally using Amazon Verified Permissions.
+
+This approach significantly simplifies future policy updates and system maintenance.
+
+---
+
+## My Thoughts
+
+What impressed me most about this architecture is the clear separation between **Authentication** and **Authorization**.
+
+For systems with multiple user groups and complex access rules, this design provides several advantages:
+
+- Complete separation of authentication and authorization.
+- Significantly less authorization code inside the application.
+- Easier policy updates without modifying business logic.
+- Better auditing and centralized permission management.
+- Well suited for SaaS and large-scale B2C applications.
+
+---
+
+## Final Thoughts
+
+In my opinion, **Amazon Cognito** and **Amazon Verified Permissions** complement each other very well for building modern authentication and authorization systems.
+
+For B2C applications that require fine-grained access control while remaining scalable as they grow, this architecture is definitely worth considering.
+
+---
+
+# References
+
+- AWS Security Blog: https://aws.amazon.com/blogs/security/building-secure-b2c-applications-with-fine-grained-access-control-using-amazon-cognito-and-amazon-verified-permissions/

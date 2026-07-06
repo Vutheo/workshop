@@ -1,54 +1,56 @@
 ---
 title: "Worklog Tuần 8"
-date: 2026-04-26
-weight: 1
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
+
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp tục phát triển dự án **AIAssistant**.
+* Bắt đầu triển khai Backend cho hệ thống.
+* Tìm hiểu dịch vụ Amazon S3 và cách tích hợp vào hệ thống.
+* Hoàn thiện sơ đồ kiến trúc (Architecture Diagram) của đề tài.
+* Tiếp tục làm việc nhóm và cập nhật báo cáo tiến độ hằng tuần.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc triển khai trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | --------------- |
+| Thứ sáu | Họp nhóm, báo cáo tiến độ thực hiện, thống nhất kế hoạch triển khai Backend và phân chia nhiệm vụ cho các thành viên. | 05/06/2026 | 05/06/2026 | |
+| Thứ bảy | Viết báo cáo công việc tuần, tổng hợp các nội dung đã hoàn thành và cập nhật tiến độ dự án. | 06/06/2026 | 06/06/2026 | |
+| Chủ nhật | Bắt đầu triển khai Backend cho dự án **AIAssistant**, xây dựng cấu trúc thư mục và các thành phần cơ bản của hệ thống. | 07/06/2026 | 07/06/2026 | |
+| Thứ hai | Tiếp tục phát triển các chức năng Backend, xây dựng API và kiểm tra quá trình kết nối giữa các thành phần của hệ thống. | 08/06/2026 | 08/06/2026 | |
+| Thứ ba | Tìm hiểu dịch vụ **Amazon S3**, nghiên cứu cách lưu trữ dữ liệu và tích hợp vào hệ thống phục vụ việc quản lý tệp. | 09/06/2026 | 09/06/2026 | |
+| Thứ tư | Thiết kế và hoàn thiện sơ đồ kiến trúc (Architecture Diagram) cho đề tài, mô tả các thành phần và luồng hoạt động của hệ thống. | 10/06/2026 | 10/06/2026 | |
+| Thứ năm | Rà soát các chức năng Backend đã triển khai, cập nhật tài liệu dự án và chuẩn bị kế hoạch công việc cho tuần tiếp theo. | 11/06/2026 | 11/06/2026 | |
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Bắt đầu triển khai Backend cho dự án **AIAssistant**:
+  * Xây dựng cấu trúc dự án.
+  * Phát triển các chức năng Backend cơ bản.
+  * Kiểm tra khả năng kết nối giữa các thành phần của hệ thống.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tìm hiểu dịch vụ **Amazon S3**:
+  * Hiểu cơ chế lưu trữ đối tượng (Object Storage).
+  * Nghiên cứu quy trình tải lên và quản lý tệp.
+  * Tìm hiểu phương pháp tích hợp S3 vào hệ thống.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hoàn thiện sơ đồ kiến trúc của đề tài:
+  * Mô tả các thành phần của hệ thống.
+  * Thể hiện luồng xử lý giữa Frontend, Backend và các dịch vụ AWS.
+  * Cập nhật tài liệu thiết kế hệ thống.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hoàn thành báo cáo công việc tuần:
+  * Tổng hợp các nội dung đã thực hiện.
+  * Cập nhật tiến độ phát triển của dự án.
+  * Chuẩn bị kế hoạch cho các giai đoạn tiếp theo.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Tiếp tục phối hợp với các thành viên trong nhóm:
+  * Họp nhóm và báo cáo tiến độ.
+  * Thảo luận các giải pháp kỹ thuật.
+  * Phân chia công việc cho từng thành viên.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Củng cố kiến thức về phát triển Backend và dịch vụ Amazon S3, đồng thời hoàn thiện tài liệu thiết kế nhằm phục vụ các giai đoạn triển khai tiếp theo của dự án **AIAssistant**.

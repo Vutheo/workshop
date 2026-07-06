@@ -1,7 +1,7 @@
 ---
 title: "Week 3 Worklog"
 date: 2026-05-10
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
@@ -14,8 +14,6 @@ pre: " <b> 1.3. </b> "
 * Participate in FCAJ Community Day to learn effective learning strategies and career development mindset.
 * Continue building AWS foundational knowledge for upcoming hands-on practice.
 
----
-
 ### Tasks Implemented During the Week:
 
 | Day | Task | Start Date | End Date | Reference |
@@ -26,8 +24,6 @@ pre: " <b> 1.3. </b> "
 | Thursday | Study Amazon EC2 fundamentals and EC2 Instance operations | 07/05/2026 | 07/05/2026 | AWS Documentation |
 | Friday | Practice EC2 and explore cost optimization methods (Stop/Terminate Instances, Billing monitoring) | 08/05/2026 | 08/05/2026 | AWS Console |
 | Saturday | Participate in FCAJ Community Day: Effective Learning Methods, Career Mindset, and GenAI Applications in Software Development | 09/05/2026 | 09/05/2026 | FCAJ Community Day |
-
----
 
 ### Week 3 Achievements:
 
@@ -73,5 +69,3 @@ pre: " <b> 1.3. </b> "
   * Reviewing and testing before deployment.
 
 * Developed a better understanding of how to effectively leverage Generative AI in learning and software development.
-
----

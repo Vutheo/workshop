@@ -3,148 +3,167 @@ title: "Blog 3"
 date: 2026-06-20
 weight: 3
 chapter: false
-pre: " <b> 3.3. </b> "
 ---
 
-# Tạo 3D Asset từ hình ảnh 2D bằng AI trên AWS
+# Tạo Mô Hình 3D Từ Ảnh 2D Bằng AI Trên AWS
 
-Sự phát triển của Generative AI đã mở ra nhiều hướng tiếp cận mới trong lĩnh vực thiết kế đồ họa và phát triển game. Thay vì phải xây dựng mô hình 3D hoàn toàn thủ công, lập trình viên có thể tận dụng các mô hình AI để chuyển đổi một hình ảnh 2D thành 3D Asset chỉ trong vài phút.
+![Generating 3D Assets with AI](/images/3-Blog/blog3.jpg)
 
-Trong bài viết này, chúng ta sẽ tìm hiểu một workflow triển khai trên AWS sử dụng hai mô hình AI mã nguồn mở là **TripoSG** và **MV-Adapter** nhằm tạo ra mô hình 3D có texture từ một ảnh concept ban đầu.
+Gần đây mình có đọc được một bài viết khá thú vị trên AWS GameTech về quy trình xây dựng pipeline tạo **mô hình 3D từ ảnh concept 2D** bằng các mô hình AI mã nguồn mở. Là một người yêu thích Game Development và AI, mình thấy workflow này khá thực tế vì cho phép lập trình viên tự sinh asset 3D mà không cần phụ thuộc vào các dịch vụ AI trả phí.
 
----
-
-# Kiến trúc giải pháp
-
-Giải pháp được chia thành hai giai đoạn xử lý chính nhằm tối ưu hiệu năng GPU cũng như chi phí vận hành.
-
-Amazon S3 đóng vai trò là kho lưu trữ trung tâm, chứa ảnh đầu vào, các mô hình trung gian và kết quả cuối cùng ở định dạng **GLB**.
-
-Quy trình xử lý gồm các bước sau:
-
-1. Tải ảnh 2D lên Amazon S3.
-2. Sử dụng Amazon EC2 GPU để sinh mesh 3D bằng TripoSG.
-3. Lưu mesh vừa tạo lên Amazon S3.
-4. Tiếp tục sử dụng EC2 GPU để tạo texture bằng MV-Adapter.
-5. Xuất mô hình 3D hoàn chỉnh và lưu lại trên Amazon S3.
-
-Luồng xử lý này giúp tách riêng các tác vụ có yêu cầu tài nguyên khác nhau, từ đó tối ưu hiệu suất và khả năng mở rộng của hệ thống.
+Trong bài viết này mình sẽ tóm tắt lại kiến trúc mà AWS đề xuất, đồng thời chia sẻ một số kinh nghiệm và lưu ý khi triển khai pipeline này trên AWS.
 
 ---
 
-# Sinh mesh 3D với TripoSG
+## Tổng quan kiến trúc
 
-Giai đoạn đầu tiên là tạo phần hình học (Geometry) của mô hình.
+Để cân bằng giữa hiệu năng xử lý và chi phí sử dụng GPU, AWS đề xuất chia toàn bộ pipeline thành hai giai đoạn xử lý chính.
 
-Để thực hiện bước này, có thể sử dụng các EC2 thuộc dòng **g4dn** được trang bị GPU NVIDIA và cài đặt sẵn môi trường Deep Learning.
+Ở trung tâm của hệ thống là **Amazon S3**, nơi lưu trữ ảnh concept ban đầu cũng như toàn bộ các file mô hình 3D được tạo ra trong suốt quá trình xử lý.
+
+Pipeline bao gồm hai bước chính:
+
+### Amazon S3
+
+Amazon S3 đóng vai trò là kho lưu trữ trung tâm.
+
+Tại đây sẽ lưu:
+
+- Ảnh concept 2D ban đầu.
+- File mô hình 3D định dạng `.glb` sau mỗi bước xử lý.
+- Mô hình 3D hoàn chỉnh sau khi được phủ texture.
+
+Việc sử dụng S3 giúp các bước xử lý hoạt động độc lập và dễ dàng mở rộng hệ thống.
+
+---
+
+## Bước 1 - Sinh Mesh 3D
+
+Giai đoạn đầu tiên sử dụng **Amazon EC2 g4dn.2xlarge**, dòng máy được trang bị GPU NVIDIA phù hợp cho các tác vụ AI.
 
 Quy trình xử lý gồm:
 
-- tải ảnh từ Amazon S3;
-- chạy mô hình TripoSG;
-- sinh mesh 3D;
-- lưu kết quả dưới định dạng `.glb`;
-- tải kết quả trở lại Amazon S3.
+1. Tải ảnh concept từ Amazon S3.
+2. Sử dụng mô hình **TripoSG** để sinh hình học (geometry) của vật thể.
+3. Xuất kết quả thành file `.glb`.
+4. Upload file vừa tạo trở lại Amazon S3.
 
-Mesh được tạo ra ở bước này đóng vai trò là nền tảng cho quá trình tạo texture ở bước tiếp theo.
+Ở bước này mô hình chỉ mới có phần khung (mesh), chưa có texture.
 
 ---
 
-# Phủ texture với MV-Adapter
+## Bước 2 - Sinh Texture Đa Góc Nhìn
 
-Sau khi có mesh 3D, mô hình **MV-Adapter** sẽ sử dụng ảnh gốc làm tham chiếu để tạo texture đa góc nhìn.
+Sau khi có mesh, bước tiếp theo là phủ texture.
 
-Do quá trình này yêu cầu lượng bộ nhớ GPU lớn, nên có thể triển khai trên các EC2 thuộc dòng **g6e**.
+Giai đoạn này yêu cầu lượng VRAM lớn hơn rất nhiều nên AWS đề xuất sử dụng **Amazon EC2 g6e.2xlarge**.
 
-Một vấn đề thường gặp là mesh sinh ra từ AI đôi khi xuất hiện lỗi **non-manifold**, khiến quá trình tạo texture bị gián đoạn.
+Pipeline sử dụng mô hình **MV-Adapter** để:
 
-Trước khi chạy MV-Adapter, cần thực hiện bước sửa lỗi mesh.
+- sử dụng ảnh concept ban đầu làm ảnh tham chiếu
+- sinh texture từ nhiều góc nhìn khác nhau
+- phủ texture lên mô hình vừa được tạo
 
-Ví dụ:
+Kết quả cuối cùng là một mô hình 3D hoàn chỉnh với đầy đủ texture.
+
+---
+
+# Triển khai trên AWS
+
+Bước đầu tiên khi triển khai là lựa chọn đúng môi trường.
+
+AWS cung cấp sẵn các **Deep Learning AMI** đã được cài đặt đầy đủ:
+
+- CUDA
+- PyTorch
+- Driver NVIDIA
+- Các thư viện AI phổ biến
+
+Điều này giúp tiết kiệm khá nhiều thời gian so với việc tự cài đặt môi trường từ đầu.
+
+---
+
+## Mẹo tối ưu chi phí
+
+Các dòng EC2 có GPU như **g4dn** hay **g6e** mang lại hiệu năng rất tốt nhưng chi phí thuê theo giờ cũng khá cao.
+
+Nếu bạn là sinh viên hoặc lập trình viên mới, mình khuyến khích nên tham gia các chương trình như:
+
+- Platform First Cloud AI Journey Bootcamp
+- AWS Study Group
+- Workshop của AWS Việt Nam
+
+Hoàn thành các bài thực hành trong những chương trình này thường sẽ nhận được **AWS Credits**, đủ để thử nghiệm các GPU Instance phục vụ nghiên cứu mà không phải quá lo lắng về chi phí.
+
+---
+
+# Xử lý Mesh trước khi phủ Texture
+
+Trong quá trình thử nghiệm, một vấn đề khá phổ biến là mesh sinh ra từ AI đôi khi xuất hiện lỗi **non-manifold**.
+
+Một số lỗi thường gặp gồm:
+
+- Các mặt bị giao nhau.
+- Lưới bị hở.
+- Topology không hợp lệ.
+
+Nếu không xử lý trước, quá trình tạo texture rất dễ bị lỗi.
+
+Ví dụ xử lý mesh:
 
 ```bash
-python fix_manifold.py \
-inputs/raw_model.glb \
-inputs/manifold_model.glb
+python fix_manifold.py inputs/raw_model.glb inputs/manifold_model.glb
 ```
 
-Sau đó tiến hành tạo texture:
+Sau đó tiếp tục thực hiện bước sinh texture:
 
 ```bash
 python -m scripts.texture_i2tex \
---image inputs/concept.jpeg \
---mesh inputs/manifold_model.glb \
---save_dir outputs \
---remove_bg
+    --image inputs/concept.jpeg \
+    --mesh inputs/manifold_model.glb \
+    --save_dir outputs \
+    --remove_bg
 ```
 
-Sau khi hoàn thành, mô hình sẽ có đầy đủ hình học và texture để phục vụ các bước xử lý tiếp theo.
+Việc sửa mesh trước khi chạy MV-Adapter giúp toàn bộ pipeline hoạt động ổn định hơn.
 
 ---
 
-# Tối ưu mô hình trước khi sử dụng
+# Đưa Asset AI vào Game Engine
 
-Mô hình được tạo bởi AI thường chỉ phù hợp cho mục đích thử nghiệm hoặc tạo nguyên mẫu.
+Nhiều bài hướng dẫn thường kết thúc sau khi tạo được file `.glb`.
 
-Để sử dụng trong game hoặc ứng dụng thời gian thực, cần thực hiện thêm một số bước tối ưu như:
+Tuy nhiên đối với lập trình game thì đây mới chỉ là bước đầu.
 
-- giảm số lượng polygon;
-- chỉnh sửa topology;
-- tối ưu UV Mapping;
-- làm sạch mesh;
-- bổ sung vật liệu (Material).
+Các model do AI tạo ra thường:
 
-Các công cụ như **Blender** có thể hỗ trợ hiệu quả cho quá trình này.
+- Có số lượng polygon chưa được tối ưu.
+- Chưa có skeleton (rig).
+- Chưa có animation.
 
----
+Trước khi đưa vào Unity hoặc Unreal Engine, chúng ta thường cần thêm một vài bước xử lý.
 
-# Rigging và Animation
+Một workflow phổ biến gồm:
 
-Sau khi tối ưu mô hình, bước tiếp theo là gắn hệ thống xương (Rigging) để mô hình có thể thực hiện các chuyển động.
+- Tối ưu model bằng **Blender**.
+- Sử dụng plugin **Rigify** để tạo hệ thống xương.
+- Upload model lên **Mixamo**.
+- Tự động sinh rig và animation.
 
-Một số lựa chọn phổ biến gồm:
-
-- sử dụng **Rigify** trong Blender để tạo bộ xương;
-- sử dụng **Mixamo** để tự động rig nhân vật và áp dụng các animation có sẵn.
-
-Nhờ đó, mô hình AI có thể nhanh chóng được đưa vào các Game Engine như Unity hoặc Unreal Engine.
+Sau các bước này, mô hình đã có thể được sử dụng trong các game engine hiện đại.
 
 ---
 
-# Tối ưu chi phí trên AWS
+# Tổng kết
 
-Các EC2 GPU có chi phí tương đối cao nếu sử dụng trong thời gian dài.
+Việc sử dụng các mô hình AI mã nguồn mở như **TripoSG** và **MV-Adapter** trên AWS giúp lập trình viên chủ động hoàn toàn trong quá trình tạo asset 3D mà không cần phụ thuộc vào các API bên ngoài.
 
-Một số cách giúp giảm chi phí bao gồm:
+Mặc dù sản phẩm tạo ra từ AI hiện nay vẫn chưa thể thay thế hoàn toàn các 3D Artist chuyên nghiệp, nhưng đây là một công cụ rất hữu ích trong giai đoạn phát triển nguyên mẫu (Prototyping).
 
-- sử dụng các Deep Learning AMI đã cài sẵn CUDA và PyTorch;
-- chỉ khởi tạo EC2 khi cần xử lý;
-- lưu toàn bộ dữ liệu trên Amazon S3;
-- tắt EC2 ngay sau khi hoàn thành workflow.
-
-Đối với sinh viên hoặc người mới bắt đầu, có thể tham gia các chương trình AWS Cloud Bootcamp hoặc Workshop để nhận AWS Credits phục vụ quá trình nghiên cứu và thử nghiệm.
+Việc tự động hóa quá trình tạo asset giúp nhóm phát triển tiết kiệm rất nhiều thời gian, từ đó có thể tập trung nhiều hơn vào những phần quan trọng như thiết kế gameplay, xây dựng hệ thống và phát triển các tính năng của trò chơi.
 
 ---
 
-# Ứng dụng thực tế
+# Tài liệu tham khảo
 
-Workflow này có thể được áp dụng trong nhiều lĩnh vực như:
-
-- phát triển game;
-- thiết kế nhân vật;
-- tạo tài sản 3D cho Metaverse;
-- AR/VR;
-- mô phỏng sản phẩm;
-- tạo nguyên mẫu nhanh (Rapid Prototyping).
-
-Việc kết hợp các mô hình AI với hạ tầng GPU của AWS giúp giảm đáng kể thời gian xây dựng asset so với quy trình thiết kế truyền thống.
-
----
-
-# Kết luận
-
-Việc triển khai TripoSG và MV-Adapter trên AWS mang đến một quy trình hoàn chỉnh để chuyển đổi hình ảnh 2D thành mô hình 3D có texture.
-
-Mặc dù các mô hình AI hiện nay vẫn chưa thể thay thế hoàn toàn quy trình thiết kế của các 3D Artist chuyên nghiệp, nhưng đây là một giải pháp hiệu quả cho giai đoạn tạo nguyên mẫu, giúp rút ngắn thời gian phát triển và giảm đáng kể khối lượng công việc thủ công.
-
-Kết hợp với Amazon EC2 GPU và Amazon S3, workflow này mang lại khả năng mở rộng linh hoạt, phù hợp cho cả quá trình nghiên cứu lẫn triển khai trong các dự án phát triển game và ứng dụng đồ họa hiện đại.
+- AWS GameTech Blog: https://aws.amazon.com/blogs/gametech/open-source-3d-game-asset-generation-using-aws/

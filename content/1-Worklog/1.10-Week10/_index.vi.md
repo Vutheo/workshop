@@ -1,54 +1,62 @@
 ---
 title: "Worklog Tuần 10"
-date: 2026-04-26
-weight: 2
+date: 2026-06-19
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp tục phát triển dự án **AIAssistant**.
+* Triển khai Frontend lên môi trường AWS.
+* Hoàn thiện sơ đồ kiến trúc (Architecture Diagram) của hệ thống.
+* Viết báo cáo tuần và cập nhật báo cáo đồ án.
+* Tiếp tục phối hợp với các thành viên trong nhóm để hoàn thiện tiến độ dự án.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc triển khai trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | --------------- |
+| Thứ sáu | Họp nhóm trên Discord, báo cáo tiến độ công việc, rà soát các hạng mục còn thiếu và thống nhất kế hoạch triển khai Frontend. | 19/06/2026 | 19/06/2026 | |
+| Thứ bảy | Thực hiện deploy Frontend lên môi trường AWS, kiểm tra quá trình build, cấu hình và khả năng truy cập của hệ thống. | 20/06/2026 | 20/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Chủ nhật | Kiểm tra và khắc phục một số lỗi phát sinh sau khi triển khai Frontend, tối ưu giao diện và kiểm thử các chức năng chính. | 21/06/2026 | 21/06/2026 | |
+| Thứ hai | Làm việc tại văn phòng AWS cùng các thành viên trong nhóm, hoàn thiện Architecture Diagram của dự án, rà soát kiến trúc hệ thống và theo dõi các video từ AWS Study Group để tìm hiểu thêm các công cụ, dịch vụ AWS phục vụ cho đồ án. | 22/06/2026 | 22/06/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ ba | Viết và cập nhật báo cáo đồ án, bổ sung nội dung về kiến trúc hệ thống, quá trình triển khai và các công nghệ đã sử dụng. | 23/06/2026 | 23/06/2026 | |
+| Thứ tư | Viết báo cáo công việc tuần, tổng hợp các nội dung đã thực hiện, cập nhật tiến độ dự án và rà soát các tài liệu liên quan. | 24/06/2026 | 24/06/2026 | |
+| Thứ năm | Họp nhóm trên Discord, đánh giá kết quả đạt được, thảo luận các vấn đề còn tồn tại và xây dựng kế hoạch phát triển cho tuần tiếp theo. | 25/06/2026 | 25/06/2026 | |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Triển khai thành công Frontend của dự án **AIAssistant** lên môi trường AWS:
+  * Hoàn thành quá trình build và deploy.
+  * Kiểm tra khả năng truy cập của Website.
+  * Khắc phục một số lỗi phát sinh sau khi triển khai.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thiện Architecture Diagram:
+  * Làm việc trực tiếp cùng các thành viên tại văn phòng AWS để rà soát và hoàn thiện sơ đồ kiến trúc.
+  * Cập nhật đầy đủ các thành phần của hệ thống.
+  * Mô tả rõ luồng dữ liệu giữa Frontend, Backend và các dịch vụ AWS.
+  * Đồng bộ sơ đồ với kiến trúc triển khai thực tế của dự án.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tìm hiểu thêm các công cụ và dịch vụ AWS:
+  * Theo dõi các video hướng dẫn từ AWS Study Group.
+  * Nghiên cứu thêm các dịch vụ hỗ trợ triển khai và vận hành hệ thống.
+  * Củng cố kiến thức phục vụ quá trình hoàn thiện dự án **AIAssistant**.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Cập nhật báo cáo đồ án:
+  * Bổ sung nội dung về kiến trúc hệ thống.
+  * Mô tả quy trình triển khai và các công nghệ sử dụng.
+  * Hoàn thiện tài liệu phục vụ quá trình thực hiện đồ án.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hoàn thành báo cáo công việc tuần:
+  * Tổng hợp các nội dung đã thực hiện.
+  * Cập nhật tiến độ phát triển của dự án.
+  * Chuẩn bị kế hoạch cho các giai đoạn tiếp theo.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tiếp tục phối hợp hiệu quả với các thành viên trong nhóm:
+  * Họp nhóm định kỳ trên Discord.
+  * Thảo luận các giải pháp kỹ thuật.
+  * Theo dõi tiến độ và phân chia công việc.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Củng cố kiến thức về triển khai ứng dụng trên AWS, đồng thời hoàn thiện hệ thống và tài liệu dự án nhằm chuẩn bị cho giai đoạn kiểm thử và hoàn thiện sản phẩm **AIAssistant**.

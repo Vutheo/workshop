@@ -1,54 +1,60 @@
 ---
 title: "Worklog Tuần 7"
-date: 2026-04-26
-weight: 1
+date: 2026-05-29
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
+
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp tục phát triển dự án **AIAssistant**.
+* Tìm hiểu AWS Key Management Service (AWS KMS) và các dịch vụ bảo mật trên AWS.
+* Hoàn thiện giao diện Website và chuẩn bị cho giai đoạn phát triển Backend.
+* Tiếp tục làm việc nhóm để hoàn thiện kiến trúc hệ thống và phân chia công việc.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc triển khai trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | --------------- |
+| Thứ sáu | Tìm hiểu **AWS Key Management Service (AWS KMS)** và các cơ chế mã hóa dữ liệu trên AWS để áp dụng cho dự án **AIAssistant**. | 29/05/2026 | 29/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ bảy | Tìm hiểu các dịch vụ bảo mật của AWS như **AWS Secrets Manager**, **AWS IAM** và phương pháp quản lý thông tin xác thực của hệ thống. | 30/05/2026 | 30/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Chủ nhật | Họp nhóm, rà soát tiến độ dự án, cập nhật kiến trúc hệ thống và thống nhất các chức năng cần triển khai trong giai đoạn Backend. | 31/05/2026 | 31/05/2026 | |
+| Thứ hai | Chỉnh sửa giao diện Website **AIAssistant**, tối ưu bố cục, cải thiện trải nghiệm người dùng và hoàn thiện các trang còn thiếu. | 01/06/2026 | 01/06/2026 | |
+| Thứ ba | Tiếp tục sửa các chức năng còn lỗi trên Website, kiểm tra luồng đăng nhập và cải thiện giao diện hiển thị. | 02/06/2026 | 02/06/2026 | |
+| Thứ tư | Làm việc nhóm trên Discord, thảo luận phương án triển khai Backend và phân chia nhiệm vụ cho từng thành viên. | 03/06/2026 | 03/06/2026 | |
+| Thứ năm | Tổng hợp kiến thức đã học, cập nhật tài liệu thiết kế hệ thống và chuẩn bị cho giai đoạn phát triển các chức năng Backend. | 04/06/2026 | 04/06/2026 | |
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu rõ hơn về **AWS Key Management Service (AWS KMS)** và vai trò của dịch vụ trong việc:
+  * Mã hóa dữ liệu.
+  * Quản lý khóa mã hóa.
+  * Bảo vệ thông tin nhạy cảm của hệ thống.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tìm hiểu thêm các dịch vụ bảo mật của AWS:
+  * AWS IAM.
+  * AWS Secrets Manager.
+  * Các cơ chế quản lý quyền truy cập và bảo mật dữ liệu.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tiếp tục hoàn thiện giao diện Website **AIAssistant**:
+  * Cải thiện bố cục giao diện.
+  * Tối ưu trải nghiệm người dùng.
+  * Hoàn thiện các trang chức năng còn thiếu.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Khắc phục một số lỗi còn tồn tại trên Website:
+  * Điều chỉnh giao diện hiển thị.
+  * Kiểm tra luồng đăng nhập và xác thực.
+  * Cải thiện tính ổn định của các chức năng cơ bản.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hoàn thiện hơn kiến trúc tổng thể của dự án:
+  * Rà soát các thành phần trong hệ thống.
+  * Cập nhật tài liệu thiết kế.
+  * Chuẩn bị cho quá trình phát triển Backend.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tiếp tục phối hợp hiệu quả với các thành viên thông qua Discord:
+  * Báo cáo tiến độ thực hiện.
+  * Thảo luận giải pháp kỹ thuật.
+  * Phân chia nhiệm vụ cho giai đoạn phát triển tiếp theo.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Củng cố kiến thức về bảo mật trên AWS và hoàn thiện nền tảng kỹ thuật để bắt đầu triển khai các chức năng Backend của dự án **AIAssistant**.

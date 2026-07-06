@@ -1,52 +1,63 @@
 ---
 title: "Week 5 Worklog"
-date: 2026-04-26
-weight: 1
+date: 2026-05-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
+
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Finalize the overall idea and architecture of the **AIAssistant** project.
+* Assign tasks and begin implementing the project's initial features.
+* Research AWS services suitable for a Serverless architecture.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks Implemented During the Week:
+
+| Day | Task | Start Date | End Date | Reference |
+| --- | ---- | ---------- | -------- | --------- |
+| Friday | Team meeting to finalize the project scope of **AIAssistant**, assign responsibilities, and create the implementation plan. | 15/05/2026 | 15/05/2026 | |
+| Saturday | Design the overall Serverless architecture and select AWS services such as Amazon S3, CloudFront, Cognito, API Gateway, Lambda, and DynamoDB. | 16/05/2026 | 16/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Sunday | Design the **AIAssistant** website interface, build the basic pages, and define core features including AI chat, local file search, and Internet search. | 17/05/2026 | 17/05/2026 | |
+| Monday | Research Gemini API integration, implement user authentication with Amazon Cognito, and prepare the project development environment. | 18/05/2026 | 18/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Tuesday | Research and practice **Amazon CloudFront**, **Amazon Route 53**, and **AWS WAF** through documentation and tutorial videos to understand CDN deployment, DNS management, and web application protection for the **AIAssistant** project. | 19/05/2026 | 19/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Wednesday | Team meeting to review progress, refine the **AIAssistant** website interface, and improve the user experience. | 20/05/2026 | 20/05/2026 | |
+| Thursday | Team meeting to finalize the website interface, review the system architecture, and prepare for the next development phase. | 21/05/2026 | 21/05/2026 | |
 
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Completed the overall planning and system architecture for the **AIAssistant** project.
 
-* Successfully created and configured an AWS Free Tier account.
+* Finalized the project's main features:
+  * Product introduction website.
+  * AI chatbot.
+  * Local file search.
+  * Internet search.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Designed a **Serverless architecture on AWS**, including:
+  * Amazon S3
+  * Amazon CloudFront
+  * Amazon Route 53
+  * AWS WAF
+  * Amazon Cognito
+  * Amazon API Gateway
+  * AWS Lambda
+  * Amazon DynamoDB
+  * AWS Secrets Manager
+  * Amazon CloudWatch
+  * Amazon GuardDuty
+  * AWS Config
+  * AWS Key Management Service (KMS)
+  * AWS Backup
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Learned the fundamentals and deployment of:
+  * **Amazon CloudFront** for low-latency content delivery.
+  * **Amazon Route 53** for DNS management and domain routing.
+  * **AWS WAF** for protecting web applications against common attacks.
 
-* Used AWS CLI to perform basic operations such as:
+* Improved and refined the website interface based on feedback from team members.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Agreed on the project development workflow using GitHub, AWS CodePipeline, and AWS CodeBuild.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Established a clearer direction for applying AI and AWS Cloud Computing technologies throughout the development of the **AIAssistant** project.

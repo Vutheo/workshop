@@ -6,30 +6,36 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+## Introduction
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+During the **First Cloud AI Journey (FCAJ)** program, I spent **12 weeks** learning AWS services, practicing cloud technologies, and developing the **AIAssistant** project. Throughout the internship, I gradually gained experience in AWS Cloud services, Serverless architecture, AI integration, security, and application deployment on AWS.
 
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+In addition to completing AWS Study Group learning materials and workshops, I collaborated with my teammates to build the **AIAssistant** system from the initial planning stage to architecture design, frontend and backend development, deployment, security testing, and final project documentation.
 
-**Week 2:** [Doing task A...](1.2-week2/)
+The following sections summarize my weekly worklog throughout the internship.
 
-**Week 3:** [Doing task B...](1.3-week3/)
+### Weekly Worklogs
 
-**Week 4:** [Doing task C...](1.4-week4/)
+**Week 1:** [Introduction to the First Cloud AI Journey program, AWS fundamentals, and project topic selection](1.1-week1/)
 
-**Week 5:** [Doing task D...](1.5-week5/)
+**Week 2:** [Setting up an AWS account, learning Cloud Computing fundamentals, and strengthening AWS basics](1.2-week2/)
 
-**Week 6:** [Doing task E...](1.6-week6/)
+**Week 3:** [Learning AWS Global Infrastructure, cost optimization, and practicing with Amazon EC2](1.3-week3/)
 
-**Week 7:** [Doing task G...](1.7-week7/)
+**Week 4:** [Practicing AWS services, attending FCAJ Community Day, and selecting technologies for the project](1.4-week4/)
 
-**Week 8:** [Doing task H...](1.8-week8/)
+**Week 5:** [Designing the Serverless architecture, planning the AIAssistant project, and developing the website interface](1.5-week5/)
 
-**Week 9:** [Doing task I...](1.9-week9/)
+**Week 6:** [Learning Amazon Cognito and API Gateway, improving the website, and attending FCAJ Community Day](1.6-week6/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 7:** [Studying AWS KMS, IAM, Secrets Manager, and preparing for Backend development](1.7-week7/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 8:** [Developing the Backend, learning Amazon S3, creating the system architecture diagram, and preparing the weekly report](1.8-week8/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 9:** [Refining the Architecture Diagram, studying AWS documentation, practicing Backend deployment, and updating project reports](1.9-week9/)
+
+**Week 10:** [Deploying the Frontend to AWS, completing the Architecture Diagram, working at the AWS Office, and updating the project documentation](1.10-week10/)
+
+**Week 11:** [Conducting the project workshop presentation and performing web security testing using OWASP ZAP and Postman](1.11-week11/)
+
+**Week 12:** [Attending FCAJ Community Day, reviewing the workshop, testing the Frontend and Backend, and completing the final project report](1.12-week12/)

@@ -1,52 +1,60 @@
 ---
 title: "Week 7 Worklog"
-date: 2026-04-26
-weight: 1
+date: 2026-05-29
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
+
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Continue developing the **AIAssistant** project.
+* Learn about **AWS Key Management Service (AWS KMS)** and AWS security services.
+* Improve the website interface and prepare for the backend development phase.
+* Continue collaborating with the team to refine the system architecture and assign development tasks.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks Implemented During the Week:
 
+| Day | Task | Start Date | End Date | Reference |
+| --- | ---- | ---------- | -------- | --------- |
+| Friday | Study **AWS Key Management Service (AWS KMS)** and AWS data encryption mechanisms to apply secure data protection to the **AIAssistant** project. | 29/05/2026 | 29/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Saturday | Learn AWS security services such as **AWS Secrets Manager**, **AWS Identity and Access Management (IAM)**, and best practices for managing application credentials. | 30/05/2026 | 30/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Sunday | Team meeting to review project progress, update the system architecture, and finalize the backend development plan. | 31/05/2026 | 31/05/2026 | |
+| Monday | Improve the **AIAssistant** website by optimizing the layout, enhancing the user experience, and completing the remaining web pages. | 01/06/2026 | 01/06/2026 | |
+| Tuesday | Continue fixing website issues, verify the user authentication flow, and improve the overall interface. | 02/06/2026 | 02/06/2026 | |
+| Wednesday | Team discussion on Discord to review the backend implementation plan and assign development tasks to team members. | 03/06/2026 | 03/06/2026 | |
+| Thursday | Summarize the knowledge gained, update the system design documentation, and prepare for the backend implementation phase. | 04/06/2026 | 04/06/2026 | |
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Gained a deeper understanding of **AWS Key Management Service (AWS KMS)** and its role in:
+  * Data encryption.
+  * Encryption key management.
+  * Protecting sensitive system information.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned additional AWS security services, including:
+  * AWS Identity and Access Management (IAM).
+  * AWS Secrets Manager.
+  * Access control and data security mechanisms.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Continued improving the **AIAssistant** website:
+  * Enhanced the user interface layout.
+  * Improved the user experience.
+  * Completed the remaining website pages.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Fixed several remaining website issues:
+  * Improved the interface display.
+  * Verified the authentication and login workflow.
+  * Increased the stability of core features.
 
-* Used AWS CLI to perform basic operations such as:
+* Further refined the overall system architecture:
+  * Reviewed the responsibilities of each system component.
+  * Updated the design documentation.
+  * Prepared for the backend development phase.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Continued effective collaboration with team members through Discord by:
+  * Reporting project progress.
+  * Discussing technical solutions.
+  * Assigning tasks for the next development phase.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Strengthened knowledge of AWS security services and established a solid technical foundation for implementing the backend features of the **AIAssistant** project.

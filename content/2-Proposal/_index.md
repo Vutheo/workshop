@@ -1,111 +1,159 @@
 ---
 title: "Proposal"
-date: 2026-04-26
+date: 2026-07-04
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# AI Assistant - Deploying an AI Application to AWS Cloud
+## A Serverless AWS Solution for an AI-Powered Virtual Assistant
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+### 1. Summary
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+**AI Assistant** is a virtual assistant application combining a Desktop App (Unity) and a Web App (React), allowing users to chat with AI (Google Gemini), manage their profiles, and sync data across platforms.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+This project deploys the entire system to **AWS Cloud** using a modern **Serverless** architecture - no server management required, automatically scalable, and you only pay for what you use.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+### 2. Problem & Solution
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+#### Current Problem
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+The AI Assistant application currently only runs locally on the user's computer (Unity Desktop App), lacking:
++ A Backend API for centralized logic processing and data storage
++ A secure user authentication system
++ A Web interface for access from any device
++ Data synchronization between the Desktop App and Web
++ Automated pipeline for deployment (CI/CD), logging, auditing, and platform security baseline detection
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+#### Solution
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+Deploy the entire system to AWS with a Serverless architecture and secure practices:
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+| Component | AWS Solution |
+|-----------|-------------|
+| User Authentication | **Amazon Cognito** - Hosted UI + JWT Token |
+| Backend API | **AWS Lambda** + **API Gateway** (Node.js/Express) |
+| Database | **Amazon DynamoDB** - Single-Table Design |
+| Image Storage | **Amazon S3** (Upload Bucket) |
+| Frontend Hosting | **Amazon S3** + **Amazon CloudFront** (CDN) |
+| Domain & SSL | **AWS Route 53** + **AWS ACM** (optional) |
+| IAM Principle of Least Privilege | **AWS IAM** - IAM Deployer & Service-Linked roles |
+| Secrets Management | **AWS KMS** + **AWS Secrets Manager** - Encrypt API Key |
+| Security Threat Detection | **Amazon GuardDuty** + **AWS Config** - Auditing and monitoring |
+| S3 Lifecycle Policy | **S3 Lifecycle Rules** - Auto-transition to S3 Glacier |
+| Web Application Firewall | **AWS WAF** - Protecting CloudFront CDN from web attacks |
+| Automated CI/CD | **AWS CodePipeline** + **AWS CodeBuild** - GitOps from GitHub |
+| Automated Database Backups | **AWS Backup** - Automated daily backup for DynamoDB |
+| Logging & Monitoring | **Amazon CloudWatch** - Log groups and alarms for Lambda |
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+### 3. System Architecture
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+The AI Assistant system uses a Serverless architecture integrating all 17 AWS services:
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+| Service | Role |
+|---------|------|
+| **Amazon Cognito** | User authentication and authorization |
+| **AWS Lambda** | Run Backend API without servers |
+| **Amazon API Gateway** | HTTP API endpoint connecting to Lambda |
+| **Amazon DynamoDB** | NoSQL database for data storage |
+| **Amazon S3** | Frontend file storage and image uploads |
+| **Amazon CloudFront** | CDN for global Frontend distribution |
+| **AWS Route 53** | DNS management and custom domains |
+| **AWS ACM** | SSL/TLS Certificate for HTTPS |
+| **AWS IAM** | User access credentials and role configurations |
+| **AWS KMS** | Customer-managed key to encrypt secret strings |
+| **AWS Secrets Manager** | Secure storage and encryption of Google Gemini API Key |
+| **Amazon CloudWatch** | Logs ingestion and CloudWatch Alarm for error notification |
+| **Amazon GuardDuty** | Continuous security threat detection |
+| **AWS Config** | Resource auditing and configuration tracking |
+| **AWS WAF** | Web Access Control Lists protecting CloudFront CDN |
+| **AWS Backup** | Centralized backups coordinator for DynamoDB |
+| **AWS CodePipeline** | Release pipeline pipeline orchestrator |
+| **AWS CodeBuild** | Managed code compilation and deployment script runner |
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+![AI Assistant System Architecture](/images/2-Proposal/architec.jpg)
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+### 4. Implementation Plan
 
-Total: $0.7/month, $8.40/12 months
+#### Phase 1: Research & Design
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
++ Survey AWS services suitable for the project requirements (Cognito, Lambda, DynamoDB, S3, CloudFront)
++ Design the overall Serverless system architecture
++ Define Single-Table Design for DynamoDB — determine `PK`/`SK` for each entity
++ Design the authentication flow (Cognito Hosted UI → JWT → API Gateway)
++ Design the REST API Backend (endpoints, request/response structure)
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+#### Phase 2: Backend Development
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
++ Build the Backend API with Node.js/Express running on AWS Lambda
++ Integrate **Amazon Cognito** for user authentication and authorization
++ Integrate **Amazon DynamoDB** to store user data and AI assistant profiles
++ Integrate **Amazon S3** for the image upload feature
++ Integrate **Google Gemini API** for the AI chat feature
++ Integrate **AWS KMS** and **AWS Secrets Manager** to secure configuration credentials
++ Configure **Serverless Framework** to deploy Lambda and API Gateway
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+#### Phase 3: Frontend & Desktop App Development
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
++ Build the Web App with React (Vite) and Cognito Hosted UI
++ Develop features: AI chat, profile management, image upload
++ Configure the Unity Desktop App to connect to the Backend API and Cognito
++ Implement two-way data synchronization between Desktop App and Web App
+
+#### Phase 4: Deployment, Security & Automation
+
++ Deploy Backend to AWS Lambda via Serverless Framework
++ Deploy Frontend to S3 + CloudFront
++ Configure custom domain and SSL certificate (Route 53 & ACM)
++ Configure **AWS CodePipeline** and **AWS CodeBuild** for automated CI/CD from GitHub `main` branch
++ Configure security layers using **Amazon GuardDuty**, **AWS Config**, and **AWS WAF**
++ Set up **AWS Backup** for DynamoDB and **CloudWatch Alarms** for error detection
+
+### 5. Cost Estimation
+
+| Service | Estimated Configuration Details | Estimated Cost (USD/month) |
+|---------|--------------------------------|---------------------------|
+| **AWS WAF** | 1 WebACL ($5.00) + 1 Rule ($1.00) + 1,000 requests | $6.00 |
+| **Amazon CloudFront** | 20 GB Outbound Data Transfer + 1,000 HTTPS Requests | $2.65 |
+| **Amazon CloudWatch** | 5 Custom Metrics ($1.50) + 2 Alarms ($0.20) + 0.15 GB Log storage | $1.70 |
+| **AWS CodePipeline** | 1 Active Pipeline | $1.00 |
+| **AWS Backup** | DynamoDB table backups (~7 GB-month Warm Storage) | $0.79 |
+| **Amazon Route 53** | 1 Hosted Zone ($0.50) + 1,000 DNS Queries | $0.50 |
+| **AWS Secrets Manager** | 1 Secret ($0.40) + 1,000 API Requests | $0.41 |
+| **AWS Config** | 50 Configuration Items Recorded + 10 Rule Evaluations | $0.16 |
+| **Amazon S3** | 5 GB-month Standard Storage + 1,000 Tier 1 Requests | $0.13 |
+| **AWS CodeBuild** | 10 build minutes (Linux ARM) | $0.02 |
+| **Amazon Cognito** | Cognito User Pool MAU tracking (1 MAU) | $0.01 |
+| **Amazon GuardDuty** | Analyze 1,000 S3 + CloudTrail log events | $0.01 |
+| **Amazon API Gateway** | 1,000 REST/HTTP API Requests | $0.01 |
+| **AWS Lambda** | 1,000 Requests (ARM64, 50 GB-seconds) | $0.00 (Within Free Tier) |
+| **AWS KMS** | 1,000 decrypt API key requests | $0.00 (Within Free Tier) |
+| **Amazon DynamoDB** | 10 GB Storage + 1,000 WCU + 500 RCU | $0.00 (Within Free Tier) |
+
+**Total Estimated Cost:** **~$13.39 USD/month**
+
+### 6. Risk Assessment
+
+| Risk | Level | Mitigation |
+|------|-------|------------|
+| Cognito authentication flow complexity (OAuth 2.0, callback URL, token handling) | High | Study AWS Cognito documentation thoroughly; test each step in isolation |
+| Data sync inconsistency between Desktop App and Web | High | Design a clear API contract; use DynamoDB as the single source of truth |
+| Gemini API key exposure in public repository | High | Use AWS Secrets Manager and AWS KMS to encrypt and load the API key at runtime |
+| CI/CD pipeline deployment failures | Medium | Verify buildspec files locally; provision correct IAM permissions to CodeBuild role |
+| Unexpected costs from forgot-to-delete resources or traffic spikes | Medium | Configure AWS Budget Alerts; set up CloudWatch Alarms; run clean up in Step 5.9 |
+
+### 7. Expected Outcomes
+
++ A complete **AI Assistant** system running on AWS Cloud with Serverless architecture
++ **Web App** accessible from any device via CloudFront URL protected by AWS WAF
++ **Desktop App (Unity)** syncing data to the Cloud in real time
++ Users can **register and log in** securely via Cognito Hosted UI
++ **CI/CD Automated** deployments running instantly on Git push
++ **Data archive policies, backup, security audits, and secrets protection** configured cleanly
+
+### 8. Source Code & Live Demo
+
+*   **Project Source Code (GitHub):** [https://github.com/LeQu0cAnh/PetWebAWSProject](https://github.com/LeQu0cAnh/PetWebAWSProject)
+*   **Workshop Documentation (GitHub Pages):** [https://locle1010.github.io/workshop/](https://locle1010.github.io/workshop/)
+*   **Application Live Demo (Web):** [https://aa.locle1010.dpdns.org](https://aa.locle1010.dpdns.org)

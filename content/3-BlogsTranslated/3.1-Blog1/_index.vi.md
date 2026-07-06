@@ -1,109 +1,114 @@
 ---
-title: "Blog 1"
+title: "Trải nghiệm Amazon Nova Act: Tự động hóa UI bằng AI, không lo fix XPath"
 date: 2026-06-05
 weight: 1
 chapter: false
-pre: " <b> 3.1. </b> "
 ---
 
-# Tự động hóa UI với Amazon Nova Act
+# Trải nghiệm Amazon Nova Act: Tự động hóa UI bằng AI, không lo fix XPath
 
-Việc tự động hóa các thao tác trên trình duyệt đã trở thành một phần quan trọng trong quá trình phát triển phần mềm. Những công việc như kiểm thử giao diện (UI Testing), thu thập dữ liệu (Web Scraping) hay tự động hóa các quy trình văn phòng đều yêu cầu trình duyệt thực hiện chính xác các thao tác của người dùng.
+![Amazon Nova Act](/images/3-Blog/blog1.jpg)
 
-Trong nhiều năm, các framework như Selenium, Playwright hay Puppeteer đã trở thành lựa chọn phổ biến. Tuy nhiên, các công cụ này phụ thuộc rất nhiều vào XPath hoặc CSS Selector để xác định phần tử trên trang web. Khi giao diện thay đổi, các selector thường không còn hợp lệ, dẫn đến việc phải sửa lại toàn bộ script automation.
+Hôm nay mình muốn chia sẻ với mọi người về một dịch vụ automation mà mình mới tìm thấy và có dịp trải nghiệm gần đây. Chuyện là mình đang "sấp mặt" với task viết script automation để test UI cho project nhóm. Khổ nỗi là phía Frontend liên tục cập nhật giao diện, khiến các script Selenium của mình cứ chạy được một lúc lại lỗi vì không tìm thấy Selector hoặc XPath.
 
-Amazon Nova Act được phát triển nhằm giải quyết hạn chế này bằng cách ứng dụng Agentic AI để điều khiển trình duyệt thông qua ngôn ngữ tự nhiên thay vì phụ thuộc vào cấu trúc HTML.
+Trong lúc gần như muốn bỏ cuộc thì mình biết đến **Amazon Nova Act**. Ban đầu mình nghĩ đây cũng chỉ là một lớp AI bọc quanh Selenium. Nhưng sau khi thử áp dụng vào đúng bài toán của mình thì nhận ra nó khác hoàn toàn. Hôm nay mình sẽ chia sẻ trải nghiệm và review chi tiết về dịch vụ automation rất hứa hẹn này.
 
 ---
 
-# Những hạn chế của Web Automation truyền thống
+## Nỗi khổ của Web Automation truyền thống
 
-Các framework automation hiện nay hoạt động dựa trên việc xác định chính xác vị trí của từng thành phần trên giao diện.
+Trước khi đi vào Nova Act, mình xin giải thích nhanh về Web Automation.
 
-Ví dụ:
+Web Automation là việc viết chương trình để máy tính tự động thao tác trên trình duyệt giống như con người: click chuột, nhập dữ liệu, cuộn trang, chọn menu...
 
-- Click vào nút đăng nhập.
-- Nhập dữ liệu vào ô tìm kiếm.
-- Chọn một menu cụ thể.
+Đây là kỹ thuật được sử dụng rất nhiều trong:
 
-Để thực hiện được điều này, lập trình viên phải sử dụng:
+- **Automation Testing**: kiểm thử website tự động trước khi phát hành.
+- **Web Scraping**: thu thập dữ liệu từ các website.
+- **Business Automation**: tự động hóa các tác vụ văn phòng như nhập dữ liệu, xử lý biểu mẫu,...
+
+Thông thường mình sử dụng các công cụ như:
+
+- Selenium
+- Playwright
+- Puppeteer
+
+Điểm chung của các công cụ này là phải xác định chính xác vị trí của từng phần tử HTML thông qua:
 
 - XPath
 - CSS Selector
-- ID
-- Name
 
-Nhược điểm của phương pháp này là:
+Vấn đề là chỉ cần Frontend đổi một class CSS, đổi cấu trúc HTML hoặc di chuyển một nút bấm sang vị trí khác thì toàn bộ script gần như phải sửa lại.
 
-- Chỉ cần Front-end thay đổi cấu trúc HTML hoặc đổi tên class là toàn bộ script có thể bị lỗi.
-- Chi phí bảo trì automation ngày càng lớn khi giao diện thay đổi liên tục.
-- Việc xây dựng các workflow dài trở nên khó mở rộng.
+Đó là công việc tốn thời gian nhất khi làm UI Automation.
 
 ---
 
-# Amazon Nova Act là gì?
+## Amazon Nova Act giải quyết bài toán này như thế nào?
 
-Amazon Nova Act là một dịch vụ AI Agent trên AWS giúp điều khiển trình duyệt web bằng ngôn ngữ tự nhiên.
+Amazon Nova Act là một dịch vụ giúp xây dựng các **AI Agent** có khả năng điều khiển trình duyệt web giống như con người.
 
-Thay vì chỉ định chính xác XPath hoặc CSS Selector, người dùng chỉ cần mô tả hành động mong muốn bằng tiếng Anh.
+Điểm đặc biệt là:
+
+**Không cần XPath.**
+
+**Không cần CSS Selector.**
+
+Thay vào đó chỉ cần sử dụng ngôn ngữ tự nhiên.
 
 Ví dụ:
 
 ```python
-nova.act("Type 'iPhone' into the search bar and press Enter")
+nova.act("Type 'iPhone' into the search bar and then press enter")
 ```
 
-Nova Act sẽ tự động:
+Nova Act sẽ tự:
 
-- Xác định ô tìm kiếm.
-- Nhập dữ liệu.
-- Thực hiện thao tác Enter.
+- xác định ô tìm kiếm
+- nhập dữ liệu
+- nhấn Enter
 
-Quá trình này không phụ thuộc trực tiếp vào HTML của trang web mà dựa trên khả năng hiểu giao diện của mô hình AI.
+mà không cần biết HTML của website như thế nào.
 
----
+AWS cho biết Nova Act sử dụng **Amazon Nova 2 Lite**, được huấn luyện bằng **Reinforcement Learning** trên các môi trường mô phỏng gọi là **Web Gyms**.
 
-# Cách Nova Act hoạt động
+Thay vì ghi nhớ XPath, mô hình học cách quan sát giao diện và đưa ra hành động giống con người.
 
-Nova Act được xây dựng trên nền tảng Amazon Nova 2 Lite và được huấn luyện bằng Reinforcement Learning trong các môi trường mô phỏng trình duyệt (Web Gyms).
-
-Thay vì nhận diện phần tử bằng XPath, AI sẽ phân tích:
-
-- Giao diện trực quan.
-- Bố cục của website.
-- Ngữ cảnh của các thành phần.
-- Nội dung hiển thị trên màn hình.
-
-Nhờ đó, khi giao diện thay đổi nhỏ, workflow vẫn có khả năng tiếp tục hoạt động mà không cần chỉnh sửa code.
+Theo AWS công bố, Nova Act đạt độ chính xác hơn **90%** trên các bài đánh giá thực tế.
 
 ---
 
-# Quy trình sử dụng Amazon Nova Act
+# Từ Playground đến Production
 
-## Bước 1: Thử nghiệm trên Playground
+## Bước 1. Trải nghiệm trên Playground
 
-Amazon cung cấp một Playground cho phép người dùng trải nghiệm Nova Act trực tiếp trên trình duyệt.
+Đầu tiên mình thử trực tiếp tại:
 
-Người dùng chỉ cần:
+https://nova.amazon.com/act
 
-- nhập URL của website;
-- mô tả yêu cầu bằng ngôn ngữ tự nhiên.
+Playground hoạt động hoàn toàn theo dạng No-code.
 
-AI sẽ tự động:
+Chỉ cần:
 
-- mở trang web;
-- cuộn trang;
-- di chuyển chuột;
-- click;
-- nhập dữ liệu.
+- nhập URL
+- nhập yêu cầu bằng tiếng Anh
 
-Điều này giúp kiểm tra nhanh workflow mà không cần viết code.
+AI sẽ tự thao tác trên trình duyệt.
+
+Bạn có thể quan sát toàn bộ quá trình:
+
+- cuộn trang
+- click
+- nhập dữ liệu
+- chuyển trang
+
+theo thời gian thực.
 
 ---
 
-## Bước 2: Phát triển bằng Python SDK
+## Bước 2. Viết code bằng Python SDK
 
-Sau khi thử nghiệm thành công, có thể sử dụng SDK Python để xây dựng workflow hoàn chỉnh.
+Sau khi thử trên Playground, mình chuyển sang viết Python.
 
 Cài đặt:
 
@@ -111,12 +116,21 @@ Cài đặt:
 pip install nova-act
 ```
 
+AWS cũng cung cấp Extension cho VS Code giúp việc phát triển thuận tiện hơn.
+
+Nova Act hỗ trợ mô hình **Hybrid Automation**.
+
+Bạn vừa có thể:
+
+- dùng AI thực hiện thao tác trên giao diện
+- vừa kết hợp với code Python truyền thống
+
 Ví dụ:
 
 ```python
 for customer in customer_list:
     nova.act(
-        f"Fill name {customer['name']} and email {customer['email']} into register form"
+        f"Fill name {customer['name']} and email {customer['email']} into form register"
     )
 
     nova.act(
@@ -124,94 +138,110 @@ for customer in customer_list:
     )
 ```
 
-Trong ví dụ trên:
+Python xử lý logic.
 
-- Python xử lý dữ liệu từ danh sách khách hàng.
-- Nova Act chịu trách nhiệm thao tác trên giao diện web.
+Nova Act xử lý UI.
 
-Điều này cho phép kết hợp AI với toàn bộ logic của chương trình.
-
----
-
-## Bước 3: Triển khai lên AWS
-
-Sau khi hoàn thành workflow, Nova Act hỗ trợ triển khai trực tiếp lên hạ tầng AWS.
-
-Quá trình triển khai bao gồm:
-
-- đóng gói ứng dụng thành container;
-- lưu trữ image trên Amazon ECR;
-- chạy workflow trên Bedrock AgentCore;
-- khởi tạo browser sandbox riêng cho từng phiên làm việc.
-
-Việc này giúp mở rộng số lượng workflow mà không cần tự quản lý trình duyệt hoặc máy chủ.
+Extension còn hỗ trợ **Live Debug** ngay trong VS Code bằng trình duyệt nhúng.
 
 ---
 
-# Các tính năng nổi bật
+## Bước 3. Deploy lên AWS
+
+Khi hoàn thành chương trình, việc triển khai khá đơn giản.
+
+Nova Act sẽ:
+
+- đóng gói ứng dụng
+- tạo container
+- đẩy lên Amazon ECR
+- chạy trên Bedrock AgentCore
+
+Mỗi workflow sẽ được thực thi trong một Browser Sandbox riêng biệt.
+
+Bạn có thể mở rộng lên hàng trăm phiên chạy đồng thời mà không cần tự quản lý Chrome Headless hay EC2.
+
+---
+
+# Ba tính năng nổi bật của Nova Act
 
 ## Human-in-the-Loop (HITL)
 
-Trong quá trình chạy automation, AI có thể gặp các tình huống như:
+Đây là tính năng mình đánh giá rất cao.
+
+Nếu AI gặp:
 
 - CAPTCHA
-- MFA
 - tài khoản bị khóa
+- yêu cầu xác minh
 
-Thay vì dừng toàn bộ workflow, Nova Act sẽ gửi thông báo cho quản trị viên thông qua Amazon SNS.
+thì workflow sẽ không bị dừng.
 
-Người dùng chỉ cần xử lý bước xác thực bằng tay, sau đó workflow sẽ tiếp tục thực hiện các bước còn lại.
+Nova Act sẽ gửi thông báo thông qua Amazon SNS.
+
+Quản trị viên chỉ cần:
+
+- mở liên kết
+- xử lý CAPTCHA
+- AI tiếp tục chạy phần còn lại.
 
 ---
 
 ## Observability
 
-Nova Act cung cấp khả năng giám sát toàn bộ quá trình thực thi.
+Nova Act cho phép theo dõi toàn bộ quá trình thực thi.
 
-Người dùng có thể xem lại:
+Bạn có thể xem:
 
-- video quá trình automation;
-- ảnh chụp từng bước;
-- lịch sử workflow.
+- Video replay
+- Screenshot từng bước
 
-Điều này giúp việc debug trở nên trực quan hơn so với các framework automation truyền thống.
+để kiểm tra AI có thao tác đúng hay không.
+
+Điều này rất hữu ích khi debug.
 
 ---
 
 ## Enterprise Security
 
-Toàn bộ workflow được thực thi trong môi trường sandbox của AWS.
+Toàn bộ workflow được chạy trong môi trường sandbox của AWS.
 
-Ngoài ra, Nova Act còn hỗ trợ:
+Có thể:
 
-- phân quyền bằng IAM;
-- cô lập phiên làm việc;
-- bảo vệ cookie và session;
-- hạn chế rò rỉ dữ liệu.
+- phân quyền IAM
+- quản lý phiên đăng nhập
+- bảo vệ Cookie
+- cô lập dữ liệu giữa các workflow
 
-Nhờ đó, giải pháp phù hợp với các môi trường doanh nghiệp yêu cầu mức bảo mật cao.
+rất phù hợp với môi trường doanh nghiệp.
 
 ---
 
-# Khi nào nên sử dụng Nova Act?
+# Đánh giá cá nhân
 
-Nova Act phù hợp với các bài toán như:
+Sau khi trải nghiệm, mình thấy Amazon Nova Act không chỉ là một công cụ AI demo.
 
-- UI Automation Testing
+Điểm mình thích nhất là:
+
+- Không còn phụ thuộc vào XPath.
+- Có thể điều khiển trình duyệt bằng ngôn ngữ tự nhiên.
+- Kết hợp được AI và Python trong cùng một workflow.
+- Triển khai trực tiếp lên hạ tầng AWS rất thuận tiện.
+
+Nếu bạn đang làm:
+
+- QA Automation
+- DevOps
+- RPA
 - Web Automation
-- Web Scraping
-- Tự động điền biểu mẫu
-- Xử lý các tác vụ văn phòng lặp đi lặp lại
-- Xây dựng AI Agent thao tác trên trình duyệt
+- AI Agent
 
-Đặc biệt, Nova Act phát huy hiệu quả trong các dự án có giao diện thường xuyên thay đổi.
+thì mình nghĩ Nova Act là một dịch vụ rất đáng để trải nghiệm.
 
 ---
 
-# Kết luận
+# Tài liệu tham khảo
 
-Amazon Nova Act mang đến một cách tiếp cận mới cho bài toán tự động hóa giao diện web bằng cách kết hợp AI Agent với trình duyệt.
-
-Thay vì phụ thuộc hoàn toàn vào XPath hoặc CSS Selector, Nova Act cho phép lập trình viên mô tả hành động bằng ngôn ngữ tự nhiên, từ đó giảm đáng kể chi phí bảo trì script khi giao diện thay đổi.
-
-Mặc dù Selenium và Playwright vẫn là những công cụ rất mạnh trong nhiều trường hợp, Nova Act mở ra một hướng tiếp cận mới cho các workflow cần khả năng thích nghi cao và tích hợp sâu với hệ sinh thái AWS. Đây là một lựa chọn đáng cân nhắc đối với các nhóm QA, DevOps và các doanh nghiệp đang xây dựng các hệ thống tự động hóa dựa trên AI.
+- Playground: https://nova.amazon.com/act
+- AWS News Blog: https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act/
+- AWS Documentation: https://docs.aws.amazon.com/nova-act/latest/userguide/what-is-nova-act.html

@@ -1,52 +1,66 @@
 ---
 title: "Week 6 Worklog"
-date: 2026-04-26
-weight: 1
+date: 2026-05-22
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
+
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Continue developing the **AIAssistant** project.
+* Learn AWS services for user authentication and API management.
+* Improve the website interface and fix existing functional issues.
+* Participate in **FCAJ Community Day** to gain insights into AI, Cloud Computing, and DevOps.
+* Collaborate with the team to review project progress and prepare for the next development phase.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks Implemented During the Week:
 
+| Day | Task | Start Date | End Date | Reference |
+| --- | ---- | ---------- | -------- | --------- |
+| Friday | Team meeting to review the progress of the **AIAssistant** project, assign tasks to members, and prepare the implementation plan for the week. | 22/05/2026 | 22/05/2026 | |
+| Saturday | Participate in **FCAJ Community Day**, learning about Context in AI, Amazon Q, Prompt Engineering, AI Agents, Multi-Agent Systems, Amazon CloudFront, Hackathon experiences, and AI applications in enterprises. | 23/05/2026 | 23/05/2026 | FCAJ Community Day |
+| Sunday | Study **Amazon Cognito**, including User Pools, Identity Pools, user authentication, authorization, and JWT Token implementation for the **AIAssistant** system. | 24/05/2026 | 24/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Monday | Learn **Amazon API Gateway**, including creating REST APIs, integrating with AWS Lambda, configuring authentication using Amazon Cognito, and understanding the request flow from the website to the backend. | 25/05/2026 | 25/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Tuesday | Improve the **AIAssistant** website interface by optimizing the layout, enhancing the user experience, and completing the introduction pages. | 26/05/2026 | 26/05/2026 | |
+| Wednesday | Fix core website issues, including member information display, member score calculation, and several UI issues identified during testing. | 27/05/2026 | 27/05/2026 | |
+| Thursday | Team discussion on Discord to review project progress, plan upcoming features, and support team members in resolving technical issues. | 28/05/2026 | 28/05/2026 | |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Participated in **FCAJ Community Day** and gained valuable practical knowledge:
+  * Understood the importance of **Context** in Prompt Engineering and how to build an AI mindset.
+  * Explored the application of **Amazon Q** in enterprise environments and AI Agent development.
+  * Learned about **Multi-Agent Systems**, including security and scalability considerations.
+  * Studied optimization techniques for **Amazon CloudFront** and gained practical insights from AI projects and Hackathons.
+  * Developed a clearer direction for applying AI and Cloud Computing technologies to the **AIAssistant** project.
 
-* Successfully created and configured an AWS Free Tier account.
+* Gained a solid understanding of **Amazon Cognito**, including:
+  * User Pools and Identity Pools.
+  * User registration, sign-in, and authentication.
+  * JWT Token-based authentication.
+  * Access control and authorization.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Learned **Amazon API Gateway**, including:
+  * Creating and managing REST APIs.
+  * Integrating API Gateway with AWS Lambda.
+  * Configuring authentication using Amazon Cognito.
+  * Understanding the request flow between the website and the backend.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Improved the **AIAssistant** website by:
+  * Optimizing the interface layout.
+  * Enhancing the user experience.
+  * Completing the system's introduction pages.
 
-* Used AWS CLI to perform basic operations such as:
+* Fixed several core website issues:
+  * Member information display.
+  * Member score calculation.
+  * UI and functional issues discovered during testing.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Collaborated effectively with team members through Discord by:
+  * Reporting project progress.
+  * Discussing implementation approaches.
+  * Supporting technical problem-solving.
+  * Agreeing on development plans for the following weeks.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Strengthened knowledge of AWS user authentication and API management while improving teamwork skills, providing a solid foundation for implementing the backend features of the **AIAssistant** project.

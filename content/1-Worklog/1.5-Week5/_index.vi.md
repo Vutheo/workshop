@@ -1,54 +1,63 @@
 ---
 title: "Worklog Tuần 5"
-date: 2026-04-26
-weight: 1
+date: 2026-05-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
+
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện ý tưởng và kiến trúc tổng thể cho dự án AIAssistant.
+* Phân chia nhiệm vụ và bắt đầu triển khai các chức năng đầu tiên của hệ thống.
+* Nghiên cứu các dịch vụ AWS phù hợp với kiến trúc Serverless.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc triển khai trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | --------------- |
+| Thứ sáu | Họp nhóm, thống nhất phạm vi dự án **AIAssistant**, phân chia nhiệm vụ cho từng thành viên và xây dựng kế hoạch triển khai. | 15/05/2026 | 15/05/2026 | |
+| Thứ bảy | Thiết kế kiến trúc tổng thể của hệ thống theo mô hình Serverless, lựa chọn các dịch vụ AWS như Amazon S3, CloudFront, Cognito, API Gateway, Lambda và DynamoDB. | 16/05/2026 | 16/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Chủ nhật | Thiết kế giao diện Website giới thiệu AIAssistant, xây dựng các trang cơ bản và xác định các chức năng chính như trò chuyện AI, tìm kiếm nội bộ và tìm kiếm trên Internet. | 17/05/2026 | 17/05/2026 | |
+| Thứ hai | Nghiên cứu phương án tích hợp Gemini API, xây dựng luồng xác thực người dùng bằng Amazon Cognito và chuẩn bị môi trường phát triển dự án. | 18/05/2026 | 18/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ ba | Làm việc tại văn phòng, nghiên cứu và thực hành các dịch vụ **Amazon CloudFront**, **Amazon Route 53** và **AWS WAF** thông qua tài liệu và video hướng dẫn nhằm hiểu rõ cách triển khai CDN, quản lý DNS và bảo vệ ứng dụng web phục vụ cho dự án AIAssistant. | 19/05/2026 | 19/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ tư | Họp nhóm rà soát tiến độ, chỉnh sửa giao diện Website AIAssistant và tối ưu trải nghiệm người dùng. | 20/05/2026 | 20/05/2026 | |
+| Thứ năm | Họp nhóm, hoàn thiện giao diện Website, thống nhất kiến trúc hệ thống và chuẩn bị cho giai đoạn phát triển tiếp theo. | 21/05/2026 | 21/05/2026 | |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thành việc xây dựng ý tưởng và kiến trúc tổng thể của dự án **AIAssistant**.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Thống nhất các chức năng chính của hệ thống:
+  * Website giới thiệu sản phẩm.
+  * Trò chuyện với AI.
+  * Tìm kiếm dữ liệu nội bộ trên máy tính.
+  * Tìm kiếm thông tin trên Internet.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thiết kế kiến trúc hệ thống theo mô hình **Serverless trên AWS**, bao gồm:
+  * Amazon S3
+  * Amazon CloudFront
+  * Amazon Route 53
+  * AWS WAF
+  * Amazon Cognito
+  * Amazon API Gateway
+  * AWS Lambda
+  * Amazon DynamoDB
+  * AWS Secrets Manager
+  * Amazon CloudWatch
+  * Amazon GuardDuty
+  * AWS Config
+  * AWS Key Management Service (KMS)
+  * AWS Backup
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tìm hiểu nguyên lý hoạt động và cách triển khai:
+  * **Amazon CloudFront** để phân phối nội dung với độ trễ thấp.
+  * **Amazon Route 53** để quản lý DNS và định tuyến tên miền.
+  * **AWS WAF** để bảo vệ ứng dụng web trước các cuộc tấn công phổ biến.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hoàn thiện bản thiết kế giao diện Website và tiếp tục chỉnh sửa giao diện dựa trên các góp ý của các thành viên trong nhóm.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Thống nhất quy trình phát triển dự án bằng GitHub, AWS CodePipeline và AWS CodeBuild.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Có định hướng rõ ràng hơn trong việc áp dụng các kiến thức AI và Cloud Computing vào quá trình phát triển dự án **AIAssistant**.

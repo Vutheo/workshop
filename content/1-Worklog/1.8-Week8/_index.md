@@ -1,52 +1,56 @@
 ---
 title: "Week 8 Worklog"
-date: 2026-04-26
-weight: 1
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Objectives of Week 8:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Continue developing the **AIAssistant** project.
+* Begin implementing the Backend of the system.
+* Learn about Amazon S3 and its integration into the system.
+* Complete the project Architecture Diagram.
+* Continue team collaboration and update the weekly progress report.
 
+### Weekly Tasks:
 
-### Week 8 Achievements:
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | ---- | ---------- | --------------- | --------- |
+| Friday | Attend the team meeting, report project progress, discuss the Backend implementation plan, and assign tasks to team members. | 05/06/2026 | 05/06/2026 | |
+| Saturday | Write the weekly report, summarize completed tasks, and update the overall project progress. | 06/06/2026 | 06/06/2026 | |
+| Sunday | Start implementing the Backend for the **AIAssistant** project by setting up the project structure and developing the core components. | 07/06/2026 | 07/06/2026 | |
+| Monday | Continue Backend development by implementing APIs and testing the communication between system components. | 08/06/2026 | 08/06/2026 | |
+| Tuesday | Study **Amazon S3**, including object storage concepts and file management for future system integration. | 09/06/2026 | 09/06/2026 | |
+| Wednesday | Design and complete the project's Architecture Diagram to illustrate the system components and workflow. | 10/06/2026 | 10/06/2026 | |
+| Thursday | Review the implemented Backend features, update the project documentation, and prepare the work plan for the following week. | 11/06/2026 | 11/06/2026 | |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Achievements of Week 8:
 
-* Successfully created and configured an AWS Free Tier account.
+* Started implementing the Backend of the **AIAssistant** project:
+  * Established the project structure.
+  * Developed the core Backend functionalities.
+  * Tested the communication between system components.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Studied **Amazon S3**:
+  * Understood the Object Storage model.
+  * Learned file upload and management processes.
+  * Researched methods for integrating Amazon S3 into the system.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Completed the project Architecture Diagram:
+  * Illustrated the major system components.
+  * Described the workflow between the Frontend, Backend, and AWS services.
+  * Updated the system design documentation.
 
-* Used AWS CLI to perform basic operations such as:
+* Completed the weekly progress report:
+  * Summarized completed tasks.
+  * Updated the project development status.
+  * Prepared the plan for the next development phase.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Continued collaborating effectively with team members:
+  * Participated in team meetings.
+  * Discussed technical solutions.
+  * Assigned tasks for the next implementation phase.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Strengthened knowledge of Backend development and Amazon S3 while improving the system design documentation to support the next stages of the **AIAssistant** project.

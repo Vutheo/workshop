@@ -6,145 +6,171 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Creating 3D Assets from 2D Images Using AI on AWS
+# Generating 3D Models from 2D Images with AI on AWS
 
-The rapid advancement of Generative AI has introduced new possibilities in game development and 3D content creation. Instead of modeling 3D objects manually, developers can now leverage AI models to transform a single 2D concept image into a textured 3D asset within minutes.
+![Generating 3D Assets with AI](/images/3-Blog/blog3.jpg)
 
-In this blog, we explore an AWS-based workflow that combines two open-source AI models—**TripoSG** and **MV-Adapter**—to generate textured 3D models from 2D concept images.
+Recently, I came across an interesting AWS GameTech article about building a complete pipeline to generate **3D assets from 2D concept images** using open-source AI models. As someone interested in game development and AI, I found this workflow especially practical because it allows developers to generate 3D assets without relying on commercial APIs.
 
----
-
-# Solution Architecture
-
-The proposed solution is divided into two processing stages to balance GPU performance and operational cost.
-
-**Amazon S3** serves as the central storage service for input images, intermediate files, and the final 3D assets in **GLB** format.
-
-The overall workflow consists of the following steps:
-
-1. Upload a 2D concept image to Amazon S3.
-2. Generate the 3D mesh using TripoSG on an Amazon EC2 GPU instance.
-3. Store the generated mesh back in Amazon S3.
-4. Apply textures using MV-Adapter on another GPU-enabled EC2 instance.
-5. Save the completed textured 3D model to Amazon S3.
-
-Separating the workflow into different stages allows each task to run on the most suitable compute resources, improving scalability and reducing unnecessary GPU costs.
+In this article, I'd like to summarize the proposed architecture and share several implementation notes that I found useful during my research.
 
 ---
 
-# Generating the 3D Mesh with TripoSG
+## System Architecture Overview
 
-The first stage focuses on creating the geometric structure of the 3D model.
+The proposed workflow separates the generation process into two GPU-intensive stages in order to balance performance and infrastructure cost.
 
-GPU-enabled EC2 instances such as the **g4dn** family are well suited for running the TripoSG model, especially when using AWS Deep Learning AMIs that already include CUDA and PyTorch.
+At the center of the architecture is **Amazon S3**, which stores both the original 2D concept images and the generated 3D models throughout the pipeline.
 
-The workflow includes:
+The overall workflow consists of:
 
-- Downloading the input image from Amazon S3
-- Running the TripoSG model
-- Generating the 3D mesh
-- Exporting the model in **.glb** format
-- Uploading the generated mesh back to Amazon S3
+### Amazon S3
 
-The resulting mesh serves as the foundation for the texturing stage.
+Amazon S3 acts as the central storage service.
+
+It stores:
+
+- Original 2D concept images
+- Intermediate 3D model files (.glb)
+- Final textured assets
+
+This makes each processing stage independent while simplifying data management.
 
 ---
 
-# Applying Textures with MV-Adapter
+## Step 1 — Generate the 3D Mesh
 
-Once the mesh has been generated, **MV-Adapter** uses the original 2D image as a reference to generate multi-view textures.
+The first stage runs on an **Amazon EC2 g4dn.2xlarge** instance equipped with an NVIDIA GPU.
 
-Because this process requires significantly more GPU memory, GPU instances from the **g6e** family are recommended.
+The workflow is:
 
-A common issue encountered during AI mesh generation is the presence of **non-manifold geometry**, which may interrupt the texture generation process.
+1. Download the concept image from Amazon S3.
+2. Use the **TripoSG** model to generate the initial 3D geometry.
+3. Export the generated mesh as a `.glb` file.
+4. Upload the generated mesh back to Amazon S3.
 
-Before applying textures, the mesh should be repaired.
+At this stage, only the object's geometry is created.
+
+No textures have been applied yet.
+
+---
+
+## Step 2 — Multi-view Texture Generation
+
+The second stage requires significantly more GPU memory.
+
+An **Amazon EC2 g6e.2xlarge** instance is recommended because texture generation consumes much more VRAM than mesh generation.
+
+This stage uses **MV-Adapter** to:
+
+- reference the original 2D concept image
+- generate textures from multiple viewing angles
+- project those textures onto the generated mesh
+
+The output is a fully textured 3D asset ready for further optimization.
+
+---
+
+# Deploying the Workflow on AWS
+
+The first step is selecting the appropriate AWS infrastructure.
+
+Using AWS Deep Learning AMIs is highly recommended because they already include:
+
+- CUDA
+- PyTorch
+- NVIDIA GPU drivers
+- common AI development libraries
+
+This significantly reduces environment setup time.
+
+---
+
+## Cost Optimization Tips
+
+GPU instances such as **g4dn** and **g6e** provide excellent performance but are relatively expensive when billed hourly.
+
+For students and early-career developers, AWS frequently organizes programs such as:
+
+- Platform First Cloud AI Journey Bootcamp
+- AWS Vietnam workshops
+- AWS Study Group events
+
+Completing the hands-on challenges often rewards participants with **AWS Credits**, which can substantially reduce the cost of experimenting with GPU-based AI workloads during research and development.
+
+---
+
+# Repairing AI-generated Meshes
+
+One common issue when using **MV-Adapter** is that meshes generated by AI models like TripoSG may contain **non-manifold geometry**.
+
+Typical problems include:
+
+- intersecting faces
+- open surfaces
+- invalid mesh topology
+
+These issues may cause the texturing pipeline to fail.
+
+A common solution is repairing the mesh before applying textures.
 
 Example:
 
 ```bash
-python fix_manifold.py \
-inputs/raw_model.glb \
-inputs/manifold_model.glb
+python fix_manifold.py inputs/raw_model.glb inputs/manifold_model.glb
 ```
 
-After repairing the mesh, textures can be generated using:
+Once the mesh has been repaired, the texture generation process can proceed:
 
 ```bash
 python -m scripts.texture_i2tex \
---image inputs/concept.jpeg \
---mesh inputs/manifold_model.glb \
---save_dir outputs \
---remove_bg
+    --image inputs/concept.jpeg \
+    --mesh inputs/manifold_model.glb \
+    --save_dir outputs \
+    --remove_bg
 ```
 
-The output is a textured 3D model that is ready for further optimization.
+Repairing the mesh first greatly improves the stability of the entire workflow.
 
 ---
 
-# Optimizing the Generated Model
+# Bringing AI Assets into a Game Engine
 
-AI-generated models are generally suitable for prototyping but often require additional optimization before being used in production.
+Many tutorials stop once the `.glb` file has been generated.
 
-Typical optimization tasks include:
+However, for game development, that is only the beginning.
 
-- Reducing polygon count
-- Improving topology
-- Optimizing UV mapping
-- Cleaning mesh geometry
-- Refining materials
+AI-generated assets usually have:
 
-Applications such as **Blender** provide powerful tools for performing these optimization steps.
+- uncontrolled polygon counts
+- no skeleton (rig)
+- no animations
 
----
+Before using them inside a game engine, additional optimization is usually required.
 
-# Rigging and Animation
+A common workflow includes:
 
-After optimization, the next step is adding a skeleton (rigging) so the model can be animated.
+- Optimizing the mesh in **Blender**
+- Creating a skeleton using the **Rigify** add-on
+- Uploading the model to **Mixamo**
+- Automatically generating character rigs and animations
 
-Popular options include:
-
-- Using the **Rigify** add-on in Blender to generate a character rig
-- Using **Mixamo** to automatically rig characters and apply prebuilt animations
-
-Once rigged, the model can be imported directly into game engines such as Unity or Unreal Engine.
+After these steps, the asset becomes suitable for integration into engines such as Unity or Unreal Engine.
 
 ---
 
-# Cost Optimization on AWS
+# Final Thoughts
 
-GPU-enabled EC2 instances provide high performance but can become expensive if left running continuously.
+Running open-source AI models such as **TripoSG** and **MV-Adapter** on AWS gives developers full control over the entire 3D asset generation pipeline without depending on third-party APIs.
 
-Several best practices can help reduce costs:
+Although AI-generated assets still cannot completely replace professional 3D artists, they are extremely valuable during the prototyping stage.
 
-- Use AWS Deep Learning AMIs with preconfigured CUDA and PyTorch.
-- Start GPU instances only when processing is required.
-- Store all project data in Amazon S3.
-- Stop or terminate EC2 instances immediately after the workflow completes.
+By automating the creation of initial 3D assets, developers can spend less time producing placeholder models and more time focusing on gameplay design, programming, and game mechanics.
 
-Students and beginners can also participate in AWS workshops or AWS Cloud Bootcamps to earn AWS Credits for experimentation and development.
+For indie developers and AI enthusiasts, this represents an exciting workflow that combines Generative AI, GPU computing, and cloud infrastructure into a practical game development pipeline.
 
 ---
 
-# Practical Applications
+# References
 
-This workflow can be applied in many scenarios, including:
-
-- Game development
-- Character creation
-- Metaverse asset generation
-- AR/VR applications
-- Product visualization
-- Rapid prototyping
-
-By combining open-source AI models with AWS GPU infrastructure, developers can significantly reduce the time required to create high-quality 3D assets.
-
----
-
-# Conclusion
-
-Deploying TripoSG and MV-Adapter on AWS provides an efficient workflow for converting 2D images into textured 3D assets.
-
-Although AI-generated models cannot yet fully replace professional 3D artists, they are highly effective during the prototyping phase, enabling developers to accelerate asset creation while reducing manual modeling effort.
-
-Combined with Amazon EC2 GPU instances and Amazon S3 storage, this solution offers a scalable and flexible workflow suitable for both research projects and real-world game development.
+- AWS GameTech Blog: https://aws.amazon.com/blogs/gametech/open-source-3d-game-asset-generation-using-aws/

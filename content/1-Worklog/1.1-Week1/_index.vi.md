@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 1"
-date: 2026-04-26
+date: 2026-04-17
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -13,20 +13,17 @@ pre: " <b> 1.1. </b> "
 * Thảo luận và lựa chọn đề tài cho bài project nhóm.
 * Làm quen với môi trường học tập và quy trình làm việc trong chương trình.
 
----
-
 ### Các công việc triển khai trong tuần:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------- | ------------ | --------------- | --------------- |
-| Thứ hai | Làm quen với các thành viên FCJ và tìm hiểu nội quy, quy định trong chương trình | 20/04/2026 | 20/04/2026 | |
-| Thứ ba | Tìm hiểu tổng quan AWS và các nhóm dịch vụ chính: Compute, Storage, Networking, Database | 21/04/2026 | 21/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ tư | Nghiên cứu tổng quan các dịch vụ AWS và cách ứng dụng trong các bài toán thực tế | 22/04/2026 | 22/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ năm | Tiếp tục tìm hiểu AWS và phân tích các use case thực tế của cloud trong doanh nghiệp | 23/04/2026 | 23/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ sáu | Thảo luận nhóm, phân tích yêu cầu và lựa chọn đề tài cho project First Cloud Journey | 24/04/2026 | 24/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ bảy | Tổng hợp lại kiến thức tuần 1 và thống nhất hướng đi ban đầu cho project | 25/04/2026 | 25/04/2026 | |
-
----
+| Thứ sáu | Làm quen với các thành viên FCJ và tìm hiểu nội quy, quy định trong chương trình | 17/04/2026 | 17/04/2026 | |
+| Thứ bảy | Tìm hiểu tổng quan AWS và các nhóm dịch vụ chính: Compute, Storage, Networking, Database | 18/04/2026 | 18/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Chủ nhật | Nghiên cứu tổng quan các dịch vụ AWS và cách ứng dụng trong các bài toán thực tế | 19/04/2026 | 19/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ hai | Tiếp tục tìm hiểu AWS và phân tích các use case thực tế của cloud trong doanh nghiệp | 20/04/2026 | 20/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ ba | Thảo luận nhóm, phân tích yêu cầu và lựa chọn đề tài cho project First Cloud Journey | 21/04/2026 | 21/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ tư | Tổng hợp lại kiến thức tuần 1 và thống nhất hướng đi ban đầu cho project | 22/04/2026 | 22/04/2026 | |
+| Thứ năm | Tiếp tục rà soát, củng cố kiến thức đã học và chuẩn bị cho kế hoạch triển khai tuần tiếp theo | 23/04/2026 | 23/04/2026 | |
 
 ### Kết quả đạt được tuần 1:
 
@@ -44,3 +41,4 @@ pre: " <b> 1.1. </b> "
 * Lựa chọn được đề tài phù hợp với khả năng và mục tiêu học tập của nhóm.
 
 * Làm quen với quy trình làm việc trong chương trình First Cloud Journey, bao gồm cách trao đổi, báo cáo và phối hợp trong nhóm.
+

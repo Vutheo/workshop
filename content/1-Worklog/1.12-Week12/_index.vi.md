@@ -1,54 +1,55 @@
 ---
 title: "Worklog Tuần 12"
-date: 2026-04-26
-weight: 2
+date: 2026-07-03
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
+
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện toàn bộ Workshop của dự án **AIAssistant**.
+* Hoàn thiện báo cáo đồ án.
+* Kiểm thử và rà soát toàn bộ hệ thống.
+* Đảm bảo Frontend và Backend hoạt động ổn định trước khi nghiệm thu.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc triển khai trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | --------------- |
+| Thứ sáu | Rà soát toàn bộ nội dung Workshop, kiểm tra cấu trúc, hình ảnh, tài liệu và các liên kết trong quá trình hướng dẫn. | 03/07/2026 | 03/07/2026 | |
+| Thứ bảy | Hoàn thiện báo cáo đồ án, bổ sung các nội dung còn thiếu, chỉnh sửa hình ảnh và định dạng tài liệu. | 04/07/2026 | 04/07/2026 | |
+| Chủ nhật | Kiểm thử toàn bộ Frontend, rà soát giao diện người dùng, luồng chức năng và xử lý các lỗi hiển thị. | 05/07/2026 | 05/07/2026 | |
+| Thứ hai | Kiểm thử Backend, xác minh hoạt động của các API, kiểm tra kết nối với cơ sở dữ liệu và các dịch vụ AWS. | 06/07/2026 | 06/07/2026 | |
+| Thứ ba | Kiểm tra khả năng tích hợp giữa Frontend và Backend, rà soát toàn bộ luồng hoạt động của hệ thống và khắc phục các lỗi còn tồn tại. | 07/07/2026 | 07/07/2026 | |
+| Thứ tư | Cập nhật tài liệu dự án, chỉnh sửa các nội dung theo góp ý của nhóm và hoàn thiện các tài liệu kỹ thuật. | 08/07/2026 | 08/07/2026 | |
+| Thứ năm | Họp nhóm tổng kết quá trình thực hiện dự án, rà soát toàn bộ sản phẩm và chuẩn bị cho quá trình báo cáo, nghiệm thu đồ án. | 09/07/2026 | 09/07/2026 | |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thiện Workshop của dự án:
+  * Kiểm tra toàn bộ nội dung.
+  * Bổ sung hình ảnh và hướng dẫn còn thiếu.
+  * Đảm bảo các bước triển khai chính xác và dễ thực hiện.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thiện báo cáo đồ án:
+  * Chỉnh sửa nội dung theo góp ý.
+  * Hoàn thiện hình ảnh, biểu đồ và tài liệu minh họa.
+  * Chuẩn hóa định dạng báo cáo.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hoàn thành quá trình kiểm thử hệ thống:
+  * Kiểm tra Frontend.
+  * Kiểm tra Backend.
+  * Kiểm tra quá trình tích hợp giữa các thành phần của hệ thống.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Khắc phục các lỗi còn tồn tại:
+  * Điều chỉnh giao diện.
+  * Cải thiện hiệu năng của hệ thống.
+  * Hoàn thiện các chức năng còn thiếu.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Tiếp tục phối hợp hiệu quả với các thành viên trong nhóm:
+  * Tổng kết tiến độ dự án.
+  * Rà soát toàn bộ tài liệu.
+  * Chuẩn bị cho quá trình báo cáo và nghiệm thu đồ án.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thiện dự án **AIAssistant** với đầy đủ tài liệu, Workshop và hệ thống hoạt động ổn định, sẵn sàng cho quá trình báo cáo và đánh giá.

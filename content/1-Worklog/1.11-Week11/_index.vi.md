@@ -1,54 +1,53 @@
 ---
 title: "Worklog Tuần 11"
-date: 2026-04-26
-weight: 2
+date: 2026-06-26
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
+
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp tục hoàn thiện dự án **AIAssistant**.
+* Chuẩn bị Workshop báo cáo tiến độ của dự án.
+* Kiểm thử bảo mật Website bằng OWASP ZAP và Postman.
+* Viết báo cáo tuần và cập nhật tài liệu dự án.
+* Tham gia sự kiện **FCAJ Community Day - June 2026** để cập nhật kiến thức về AI và AWS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc triển khai trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | --------------- |
+| Thứ sáu | Viết báo cáo công việc tuần, tổng hợp các nội dung đã thực hiện và cập nhật tiến độ dự án. | 26/06/2026 | 26/06/2026 | |
+| Thứ bảy | Tham gia sự kiện **FCAJ Community Day - June 2026**, tìm hiểu các xu hướng AI, Cloud Computing, AWS và ứng dụng AI trong doanh nghiệp. | 27/06/2026 | 27/06/2026 | |
+| Chủ nhật | Chuẩn bị nội dung Workshop báo cáo dự án, rà soát các chức năng đã hoàn thành và xây dựng nội dung trình bày. | 28/06/2026 | 28/06/2026 | |
+| Thứ hai | Thực hành kiểm thử bảo mật Website bằng **OWASP ZAP**, quét các lỗ hổng bảo mật và phân tích kết quả kiểm thử. | 29/06/2026 | 29/06/2026 | |
+| Thứ ba | Sử dụng **Postman** để kiểm thử các API Backend, kiểm tra xác thực, phân quyền và xử lý lỗi của hệ thống. | 30/06/2026 | 30/06/2026 | |
+| Thứ tư | Tiếp tục chỉnh sửa các lỗi phát hiện trong quá trình kiểm thử, cập nhật tài liệu và bổ sung các nội dung còn thiếu của dự án. | 01/07/2026 | 01/07/2026 | |
+| Thứ năm | Họp nhóm, đánh giá kết quả kiểm thử, thống nhất các nội dung cần hoàn thiện trước khi bước vào giai đoạn hoàn thiện sản phẩm. | 02/07/2026 | 02/07/2026 | |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thành báo cáo công việc tuần và cập nhật tiến độ dự án.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Chuẩn bị nội dung Workshop báo cáo dự án:
+  * Rà soát các chức năng đã hoàn thành.
+  * Hoàn thiện nội dung trình bày.
+  * Chuẩn bị tài liệu phục vụ báo cáo.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thực hiện kiểm thử bảo mật Website:
+  * Sử dụng OWASP ZAP để quét lỗ hổng bảo mật.
+  * Phân tích các cảnh báo và đánh giá mức độ ảnh hưởng.
+  * Đề xuất phương án khắc phục một số vấn đề được phát hiện.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Kiểm thử Backend bằng Postman:
+  * Kiểm tra các API.
+  * Xác minh cơ chế xác thực và phân quyền.
+  * Kiểm tra phản hồi của hệ thống trong các trường hợp khác nhau.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Tham gia sự kiện **FCAJ Community Day - June 2026**:
+  * Tìm hiểu các xu hướng AI và Cloud Computing.
+  * Học hỏi thêm về Voice Agent, DevOps Agent, Amazon Q và AWS Security.
+  * Tiếp cận các kinh nghiệm thực tế từ các chuyên gia trong lĩnh vực AI và Cloud.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Tiếp tục phối hợp với các thành viên trong nhóm để hoàn thiện hệ thống và chuẩn bị cho giai đoạn hoàn thiện đồ án.

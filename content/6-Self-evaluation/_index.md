@@ -26,7 +26,7 @@ Based on my overall internship experience, I assess my performance according to 
 | 8 | Teamwork | Collaborating and supporting team members effectively | ✅ | ☐ | ☐ |
 | 9 | Work Attitude | Demonstrating professionalism, enthusiasm, and a willingness to learn | ✅ | ☐ | ☐ |
 | 10 | Problem-Solving Skills | Analyzing and resolving problems at a basic to intermediate level | ☐ | ✅ | ☐ |
-| 11 | Contribution | Contributing to the team's overall progress and project outcomes | ✅ | ✅ | ☐ |
+| 11 | Contribution | Contributing to the team's overall progress and project outcomes | ✅ | ☐ | ☐ |
 | 12 | Overall Performance | Overall performance during the internship period | ☐ | ✅ | ☐ |
 
 ### Future Development Goals

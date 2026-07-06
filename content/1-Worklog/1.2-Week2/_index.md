@@ -1,49 +1,55 @@
 ---
-title: "Week 2 Worklog"
-date: 2026-05-03
-weight: 1
+title: "Week 3 Worklog"
+date: 2026-05-01
+weight: 3
 chapter: false
-pre: " <b> 1.2. </b> "
+pre: " <b> 1.3. </b> "
 ---
 
-### Week 2 Objectives:
+### Week 3 Objectives:
 
-* Continue learning the overall overview of AWS and its core service categories.
-* Complete the creation and familiarization with the AWS Free Tier account.
-* Observe and study through Cloud Computing training videos.
-* Strengthen foundational knowledge before moving on to deeper hands-on practice in the following weeks.
-
----
+* Learn about AWS Global Infrastructure and AWS service management tools.
+* Understand cost optimization strategies when using AWS, especially AWS Free Tier.
+* Learn the fundamentals of Amazon EC2 and methods to control AWS costs.
+* Continue building a solid AWS knowledge foundation for the upcoming hands-on practice sessions.
 
 ### Tasks Implemented During the Week:
 
 | Day | Task | Start Date | End Date | Reference |
 | --- | ---- | ---------- | -------- | --------- |
-| 2 | Reconnect with team members, update progress, and agree on weekly learning plan | 26/04/2026 | 26/04/2026 | |
-| 3 | Continue studying AWS overview and core service categories: Compute, Storage, Networking, Database | 27/04/2026 | 27/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 4 | Create and complete AWS Free Tier account setup, learn basic AWS account management | 28/04/2026 | 28/04/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 5 | Watch Cloud Computing videos on AWS Study Group (Module 01-01, 01-02, 01-03) to understand cloud fundamentals | 29/04/2026 | 30/04/2026 | AWS Study Group YouTube |
-| 6 | Summarize learned knowledge and discuss project orientation and relevant AWS services with the team | 01/05/2026 | 02/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Friday | Module 01-04 - AWS Global Infrastructure | 01/05/2026 | 01/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Saturday | Module 01-05 - AWS Service Management Tools | 02/05/2026 | 02/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Sunday | Module 01-06 - AWS Cost Optimization and Working with AWS Support | 03/05/2026 | 03/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Monday | Learn the fundamentals of Amazon EC2 and how to manage EC2 instances | 04/05/2026 | 04/05/2026 | AWS Documentation |
+| Tuesday | Practice using Amazon EC2 and explore cost optimization techniques (Stop/Terminate Instances, Billing monitoring) | 05/05/2026 | 05/05/2026 | AWS Console |
+| Wednesday | Review and practice the previous lessons to reinforce AWS knowledge | 06/05/2026 | 06/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thursday | Summarize the knowledge gained during Week 3 and prepare for the hands-on activities in the following week | 07/05/2026 | 07/05/2026 | |
 
----
+### Week 3 Achievements:
 
-### Week 2 Achievements:
+* Gained a better understanding of AWS Global Infrastructure:
+  * Region
+  * Availability Zone
+  * Edge Location
 
-* Gained a clearer understanding of the Cloud Computing model and how AWS operates at a high level.
-* Successfully created and configured an AWS Free Tier account and became familiar with the AWS Management Console.
-* Learned core AWS service categories:
-  * Compute
-  * Storage
-  * Networking
-  * Database
+* Learned the core AWS management tools:
+  * AWS Management Console
+  * AWS CLI
+  * AWS SDK
 
-* Watched training videos from AWS Study Group:
-  * Module 01-01: Introduction to Cloud Computing
-  * Module 01-02: Core Concepts of Cloud
-  * Module 01-03: Starting Your Cloud Journey
+* Understood how to monitor and optimize AWS costs:
+  * Billing Dashboard
+  * AWS Budget
+  * Cost Explorer
 
-* Developed a better understanding of how cloud services are applied in real-world scenarios.
+* Acquired fundamental knowledge of Amazon EC2:
+  * EC2 Instance
+  * Instance Type
+  * Stop / Start / Terminate Instance
+  * Monitoring and controlling AWS costs
 
-* Strengthened the team’s project direction based on the knowledge gained.
+* Reinforced knowledge by reviewing and practicing AWS Global Infrastructure, AWS Service Management Tools, AWS Cost Optimization, and Amazon EC2.
 
-* Prepared foundational knowledge for upcoming deeper hands-on practice weeks.
+* Developed the ability to use basic AWS tools to manage cloud resources and monitor service costs effectively.
+
+* Built a stronger foundation of AWS knowledge and practical skills for the more advanced hands-on labs in the following weeks.

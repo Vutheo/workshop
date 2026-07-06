@@ -1,52 +1,62 @@
 ---
 title: "Week 10 Worklog"
-date: 2026-04-26
-weight: 2
+date: 2026-06-19
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Continue developing the **AIAssistant** project.
+* Deploy the Frontend to the AWS environment.
+* Complete the system Architecture Diagram.
+* Write the weekly report and update the project report.
+* Continue collaborating with team members to keep the project on schedule.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Weekly Tasks:
 
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | ---- | ---------- | --------------- | --------- |
+| Friday | Held a team meeting on Discord to report progress, review pending tasks, and finalize the Frontend deployment plan. | 19/06/2026 | 19/06/2026 | |
+| Saturday | Deployed the Frontend to AWS, verified the build process, configured the deployment, and tested website accessibility. | 20/06/2026 | 20/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Sunday | Tested and fixed issues after deployment, optimized the user interface, and verified the core functionalities of the website. | 21/06/2026 | 21/06/2026 | |
+| Monday | Worked at the AWS Office with team members to finalize the project's Architecture Diagram, review the overall system architecture, and watched AWS Study Group videos to learn additional AWS services and tools related to the project. | 22/06/2026 | 22/06/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Tuesday | Updated the project report by adding system architecture, deployment procedures, and the technologies used throughout the project. | 23/06/2026 | 23/06/2026 | |
+| Wednesday | Wrote the weekly report, summarized completed tasks, updated the project progress, and reviewed project documentation. | 24/06/2026 | 24/06/2026 | |
+| Thursday | Held a team meeting on Discord to evaluate achievements, discuss remaining issues, and prepare the development plan for the following week. | 25/06/2026 | 25/06/2026 | |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully deployed the **AIAssistant** Frontend to AWS:
+  * Completed the build and deployment process.
+  * Verified website accessibility.
+  * Resolved several issues discovered after deployment.
 
-* Successfully created and configured an AWS Free Tier account.
+* Completed the Architecture Diagram:
+  * Worked together with team members at the AWS Office to review and finalize the system architecture.
+  * Updated all system components in the architecture diagram.
+  * Clearly illustrated the data flow between the Frontend, Backend, and AWS services.
+  * Synchronized the architecture diagram with the actual deployment design.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Expanded knowledge of AWS services and tools:
+  * Watched technical tutorials from AWS Study Group.
+  * Learned additional AWS services related to application deployment and system operations.
+  * Strengthened AWS knowledge to support the completion of the **AIAssistant** project.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Updated the project documentation:
+  * Added detailed information about the system architecture.
+  * Documented the deployment workflow and technologies used.
+  * Improved the project documentation for future development and reporting.
 
-* Used AWS CLI to perform basic operations such as:
+* Completed the weekly report:
+  * Summarized all completed tasks.
+  * Updated the overall project progress.
+  * Prepared the development plan for the next phase.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Continued effective collaboration with team members:
+  * Participated in regular meetings on Discord.
+  * Discussed technical solutions and project implementation.
+  * Monitored project progress and coordinated task assignments.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Strengthened practical experience in deploying applications on AWS while improving both the project implementation and documentation in preparation for the testing and final completion of the **AIAssistant** system.

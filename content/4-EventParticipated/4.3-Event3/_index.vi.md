@@ -18,7 +18,7 @@ pre: " <b> 4.3. </b> "
 ### Danh Sách Diễn Giả
 
 - **Steve Tran** - Founder CloudThinker
-- **Hieu Nghi** 
+- **Hieu Nghi** - AI Engineer - Renova Cloud Vietnam
 - **Trung Vu** - CEO Revve AI
 - **Kiet** - AWS Student Video Group
 - **Bao Phan** - Cloud Engineer Cloud Kinetics

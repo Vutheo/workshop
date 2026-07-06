@@ -1,13 +1,14 @@
 ---
 title: "Worklog Tuần 4"
-date: 2026-05-16
-weight: 1
+date: 2026-05-08
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
 ### Mục tiêu tuần 4:
 
+* Tham gia FCAJ Community Day để học hỏi phương pháp học tập hiệu quả và định hướng phát triển nghề nghiệp.
 * Thực hành các dịch vụ AWS cơ bản thông qua các lab trên AWS Study Group.
 * Hiểu cách quản lý và theo dõi chi phí AWS bằng Billing and Cost Management.
 * Tìm hiểu và thực hành Amazon EC2.
@@ -16,24 +17,23 @@ pre: " <b> 1.4. </b> "
 * Tiếp cận Amazon Bedrock và các ứng dụng Generative AI trên AWS.
 * Thảo luận nhóm để lựa chọn các dịch vụ AWS phù hợp cho đề tài project.
 
----
-
 ### Các công việc triển khai trong tuần:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------- | ------------ | --------------- | --------------- |
-| Thứ hai | Thực hành Billing and Cost Management, thiết lập AWS Budget để theo dõi chi phí | 11/05/2026 | 11/05/2026 | AWS Study Group |
-| Thứ ba | Thực hành Amazon EC2: tạo, quản lý và giám sát EC2 Instance | 12/05/2026 | 12/05/2026 | AWS Study Group |
-| Thứ tư | Thực hành Amazon Aurora và Amazon RDS, tìm hiểu dịch vụ cơ sở dữ liệu được quản lý | 13/05/2026 | 13/05/2026 | AWS Study Group |
-| Thứ năm | Thực hành AWS Lambda và tìm hiểu kiến trúc Serverless | 14/05/2026 | 14/05/2026 | AWS Study Group |
-| Thứ sáu | Thực hành Amazon Bedrock, tìm hiểu khả năng tích hợp Generative AI vào ứng dụng | 15/05/2026 | 15/05/2026 | AWS Study Group |
-| Thứ bảy | Họp nhóm, đánh giá các dịch vụ AWS đã học và lựa chọn công nghệ phù hợp cho project | 16/05/2026 | 16/05/2026 | Group Discussion |
-
----
+| Thứ sáu | Thực hành Billing and Cost Management, thiết lập AWS Budget để theo dõi chi phí | 08/05/2026 | 08/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ bảy | Tham gia **FCAJ Community Day**: Phương pháp học tập hiệu quả, tư duy nghề nghiệp và ứng dụng GenAI trong phát triển phần mềm | 09/05/2026 | 09/05/2026 | FCAJ Community Day |
+| Chủ nhật | Thực hành Amazon EC2: tạo, quản lý và giám sát EC2 Instance | 10/05/2026 | 10/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ hai | Thực hành Amazon Aurora và Amazon RDS, tìm hiểu dịch vụ cơ sở dữ liệu được quản lý | 11/05/2026 | 11/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ ba | Thực hành AWS Lambda và tìm hiểu kiến trúc Serverless | 12/05/2026 | 12/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ tư | Thực hành Amazon Bedrock, tìm hiểu khả năng tích hợp Generative AI vào ứng dụng | 13/05/2026 | 13/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ năm | Họp nhóm, đánh giá các dịch vụ AWS đã học và lựa chọn công nghệ phù hợp cho project | 14/05/2026 | 14/05/2026 | |
 
 ### Kết quả đạt được tuần 4:
 
-* Hoàn thành 5 bài thực hành trên AWS Study Group và nhận thêm AWS Credits hỗ trợ cho quá trình học tập.
+* Tham gia **FCAJ Community Day** và tiếp thu các phương pháp học tập hiệu quả, tư duy phát triển nghề nghiệp cũng như cách ứng dụng Generative AI trong quá trình học tập và phát triển phần mềm.
+
+* Hoàn thành các bài thực hành trên AWS Study Group và nhận thêm AWS Credits hỗ trợ cho quá trình học tập.
 
 * Hiểu cách quản lý chi phí AWS thông qua:
   * Billing Dashboard
@@ -66,5 +66,3 @@ pre: " <b> 1.4. </b> "
   * Thống nhất hướng triển khai ban đầu cho hệ thống
 
 * Nâng cao kỹ năng thực hành AWS và chuẩn bị cho các giai đoạn phát triển project tiếp theo.
-
----
