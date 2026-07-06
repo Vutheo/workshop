@@ -8,7 +8,7 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-* Tiếp tục hoàn thiện dự án **AIAssistant**.
+* Tiếp tục hoàn thiện dự án **AI Assistant**.
 * Chuẩn bị Workshop báo cáo tiến độ của dự án.
 * Kiểm thử bảo mật Website bằng OWASP ZAP và Postman.
 * Viết báo cáo tuần và cập nhật tài liệu dự án.

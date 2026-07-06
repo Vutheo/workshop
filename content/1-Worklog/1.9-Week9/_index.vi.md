@@ -8,7 +8,7 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-* Tiếp tục phát triển Backend cho dự án **AIAssistant**.
+* Tiếp tục phát triển Backend cho dự án **AI Assistant**.
 * Hoàn thiện sơ đồ kiến trúc (Architecture Diagram) theo góp ý của giảng viên và nhóm.
 * Tìm hiểu tài liệu AWS để chuẩn bị triển khai Backend lên môi trường Cloud.
 * Thực hành các bước triển khai Backend trên AWS.
@@ -58,4 +58,4 @@ pre: " <b> 1.9. </b> "
   * Theo dõi tiến độ công việc.
   * Phân chia nhiệm vụ cho giai đoạn tiếp theo.
 
-* Củng cố kiến thức về triển khai ứng dụng trên AWS, đồng thời hoàn thiện tài liệu thiết kế và Backend để chuẩn bị cho các giai đoạn phát triển tiếp theo của dự án **AIAssistant**.
+* Củng cố kiến thức về triển khai ứng dụng trên AWS, đồng thời hoàn thiện tài liệu thiết kế và Backend để chuẩn bị cho các giai đoạn phát triển tiếp theo của dự án **AI Assistant**.

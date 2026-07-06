@@ -7,8 +7,8 @@ pre: " <b> 1.7. </b> "
 ---
 
 ### Mục tiêu tuần 7:
-
-* Tiếp tục phát triển dự án **AIAssistant**.
+ 
+* Tiếp tục phát triển dự án **AI Assistant**.
 * Tìm hiểu AWS Key Management Service (AWS KMS) và các dịch vụ bảo mật trên AWS.
 * Hoàn thiện giao diện Website và chuẩn bị cho giai đoạn phát triển Backend.
 * Tiếp tục làm việc nhóm để hoàn thiện kiến trúc hệ thống và phân chia công việc.
@@ -17,10 +17,10 @@ pre: " <b> 1.7. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------- | ------------ | --------------- | --------------- |
-| Thứ sáu | Tìm hiểu **AWS Key Management Service (AWS KMS)** và các cơ chế mã hóa dữ liệu trên AWS để áp dụng cho dự án **AIAssistant**. | 29/05/2026 | 29/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ sáu | Tìm hiểu **AWS Key Management Service (AWS KMS)** và các cơ chế mã hóa dữ liệu trên AWS để áp dụng cho dự án **AI Assistant**. | 29/05/2026 | 29/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 | Thứ bảy | Tìm hiểu các dịch vụ bảo mật của AWS như **AWS Secrets Manager**, **AWS IAM** và phương pháp quản lý thông tin xác thực của hệ thống. | 30/05/2026 | 30/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 | Chủ nhật | Họp nhóm, rà soát tiến độ dự án, cập nhật kiến trúc hệ thống và thống nhất các chức năng cần triển khai trong giai đoạn Backend. | 31/05/2026 | 31/05/2026 | |
-| Thứ hai | Chỉnh sửa giao diện Website **AIAssistant**, tối ưu bố cục, cải thiện trải nghiệm người dùng và hoàn thiện các trang còn thiếu. | 01/06/2026 | 01/06/2026 | |
+| Thứ hai | Chỉnh sửa giao diện Website **AI Assistant**, tối ưu bố cục, cải thiện trải nghiệm người dùng và hoàn thiện các trang còn thiếu. | 01/06/2026 | 01/06/2026 | |
 | Thứ ba | Tiếp tục sửa các chức năng còn lỗi trên Website, kiểm tra luồng đăng nhập và cải thiện giao diện hiển thị. | 02/06/2026 | 02/06/2026 | |
 | Thứ tư | Làm việc nhóm trên Discord, thảo luận phương án triển khai Backend và phân chia nhiệm vụ cho từng thành viên. | 03/06/2026 | 03/06/2026 | |
 | Thứ năm | Tổng hợp kiến thức đã học, cập nhật tài liệu thiết kế hệ thống và chuẩn bị cho giai đoạn phát triển các chức năng Backend. | 04/06/2026 | 04/06/2026 | |
@@ -37,7 +37,7 @@ pre: " <b> 1.7. </b> "
   * AWS Secrets Manager.
   * Các cơ chế quản lý quyền truy cập và bảo mật dữ liệu.
 
-* Tiếp tục hoàn thiện giao diện Website **AIAssistant**:
+* Tiếp tục hoàn thiện giao diện Website **AI Assistant**:
   * Cải thiện bố cục giao diện.
   * Tối ưu trải nghiệm người dùng.
   * Hoàn thiện các trang chức năng còn thiếu.
@@ -57,4 +57,4 @@ pre: " <b> 1.7. </b> "
   * Thảo luận giải pháp kỹ thuật.
   * Phân chia nhiệm vụ cho giai đoạn phát triển tiếp theo.
 
-* Củng cố kiến thức về bảo mật trên AWS và hoàn thiện nền tảng kỹ thuật để bắt đầu triển khai các chức năng Backend của dự án **AIAssistant**.
+* Củng cố kiến thức về bảo mật trên AWS và hoàn thiện nền tảng kỹ thuật để bắt đầu triển khai các chức năng Backend của dự án **AI Assistant**.

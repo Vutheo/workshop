@@ -8,7 +8,7 @@ pre: " <b> 1.9. </b> "
 
 ### Objectives of Week 9:
 
-* Continue developing the Backend of the **AIAssistant** project.
+* Continue developing the Backend of the **AI Assistant** project.
 * Revise the Architecture Diagram based on feedback from the supervisor and team members.
 * Study AWS documentation to prepare for Backend deployment.
 * Practice deploying the Backend to AWS.
@@ -58,4 +58,4 @@ pre: " <b> 1.9. </b> "
   * Reviewed project progress.
   * Assigned tasks for the next implementation phase.
 
-* Strengthened knowledge of AWS application deployment while improving the Backend implementation and project documentation to support the next stages of the **AIAssistant** project.
+* Strengthened knowledge of AWS application deployment while improving the Backend implementation and project documentation to support the next stages of the **AI Assistant** project.

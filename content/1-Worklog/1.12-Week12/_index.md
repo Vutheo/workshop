@@ -8,7 +8,7 @@ pre: " <b> 1.12. </b> "
 
 ### Objectives of Week 12:
 
-* Finalize the **AIAssistant** workshop.
+* Finalize the **AI Assistant** workshop.
 * Complete the project report.
 * Perform comprehensive system testing.
 * Ensure the Frontend and Backend are fully functional before the final presentation.
@@ -37,4 +37,4 @@ pre: " <b> 1.12. </b> "
 
 * Completed the project documentation and prepared all materials for the final presentation.
 
-* Successfully finalized the **AIAssistant** project and prepared it for the graduation project evaluation.
+* Successfully finalized the **AI Assistant** project and prepared it for the graduation project evaluation.

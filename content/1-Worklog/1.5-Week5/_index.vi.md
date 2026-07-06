@@ -16,18 +16,18 @@ pre: " <b> 1.5. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------- | ------------ | --------------- | --------------- |
-| Thứ sáu | Họp nhóm, thống nhất phạm vi dự án **AIAssistant**, phân chia nhiệm vụ cho từng thành viên và xây dựng kế hoạch triển khai. | 15/05/2026 | 15/05/2026 | |
+| Thứ sáu | Họp nhóm, thống nhất phạm vi dự án **AI Assistant**, phân chia nhiệm vụ cho từng thành viên và xây dựng kế hoạch triển khai. | 15/05/2026 | 15/05/2026 | |
 | Thứ bảy | Thiết kế kiến trúc tổng thể của hệ thống theo mô hình Serverless, lựa chọn các dịch vụ AWS như Amazon S3, CloudFront, Cognito, API Gateway, Lambda và DynamoDB. | 16/05/2026 | 16/05/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Chủ nhật | Thiết kế giao diện Website giới thiệu AIAssistant, xây dựng các trang cơ bản và xác định các chức năng chính như trò chuyện AI, tìm kiếm nội bộ và tìm kiếm trên Internet. | 17/05/2026 | 17/05/2026 | |
+| Chủ nhật | Thiết kế giao diện Website giới thiệu AI Assistant, xây dựng các trang cơ bản và xác định các chức năng chính như trò chuyện AI, tìm kiếm nội bộ và tìm kiếm trên Internet. | 17/05/2026 | 17/05/2026 | |
 | Thứ hai | Nghiên cứu phương án tích hợp Gemini API, xây dựng luồng xác thực người dùng bằng Amazon Cognito và chuẩn bị môi trường phát triển dự án. | 18/05/2026 | 18/05/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ ba | Làm việc tại văn phòng, nghiên cứu và thực hành các dịch vụ **Amazon CloudFront**, **Amazon Route 53** và **AWS WAF** thông qua tài liệu và video hướng dẫn nhằm hiểu rõ cách triển khai CDN, quản lý DNS và bảo vệ ứng dụng web phục vụ cho dự án AIAssistant. | 19/05/2026 | 19/05/2026 | https://www.youtube.com/@AWSStudyGroup |
-| Thứ tư | Họp nhóm rà soát tiến độ, chỉnh sửa giao diện Website AIAssistant và tối ưu trải nghiệm người dùng. | 20/05/2026 | 20/05/2026 | |
+| Thứ ba | Làm việc tại văn phòng, nghiên cứu và thực hành các dịch vụ **Amazon CloudFront**, **Amazon Route 53** và **AWS WAF** thông qua tài liệu và video hướng dẫn nhằm hiểu rõ cách triển khai CDN, quản lý DNS và bảo vệ ứng dụng web phục vụ cho dự án AI Assistant. | 19/05/2026 | 19/05/2026 | https://www.youtube.com/@AWSStudyGroup |
+| Thứ tư | Họp nhóm rà soát tiến độ, chỉnh sửa giao diện Website AI Assistant và tối ưu trải nghiệm người dùng. | 20/05/2026 | 20/05/2026 | |
 | Thứ năm | Họp nhóm, hoàn thiện giao diện Website, thống nhất kiến trúc hệ thống và chuẩn bị cho giai đoạn phát triển tiếp theo. | 21/05/2026 | 21/05/2026 | |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hoàn thành việc xây dựng ý tưởng và kiến trúc tổng thể của dự án **AIAssistant**.
+* Hoàn thành việc xây dựng ý tưởng và kiến trúc tổng thể của dự án **AI Assistant**.
 
 * Thống nhất các chức năng chính của hệ thống:
   * Website giới thiệu sản phẩm.
@@ -60,4 +60,4 @@ pre: " <b> 1.5. </b> "
 
 * Thống nhất quy trình phát triển dự án bằng GitHub, AWS CodePipeline và AWS CodeBuild.
 
-* Có định hướng rõ ràng hơn trong việc áp dụng các kiến thức AI và Cloud Computing vào quá trình phát triển dự án **AIAssistant**.
+* Có định hướng rõ ràng hơn trong việc áp dụng các kiến thức AI và Cloud Computing vào quá trình phát triển dự án **AI Assistant**.

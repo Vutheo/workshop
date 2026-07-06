@@ -8,7 +8,7 @@ pre: " <b> 1.12. </b> "
 
 ### Mục tiêu tuần 12:
 
-* Hoàn thiện toàn bộ Workshop của dự án **AIAssistant**.
+* Hoàn thiện toàn bộ Workshop của dự án **AI Assistant**.
 * Hoàn thiện báo cáo đồ án.
 * Kiểm thử và rà soát toàn bộ hệ thống.
 * Đảm bảo Frontend và Backend hoạt động ổn định trước khi nghiệm thu.
@@ -52,4 +52,4 @@ pre: " <b> 1.12. </b> "
   * Rà soát toàn bộ tài liệu.
   * Chuẩn bị cho quá trình báo cáo và nghiệm thu đồ án.
 
-* Hoàn thiện dự án **AIAssistant** với đầy đủ tài liệu, Workshop và hệ thống hoạt động ổn định, sẵn sàng cho quá trình báo cáo và đánh giá.
+* Hoàn thiện dự án **AI Assistant** với đầy đủ tài liệu, Workshop và hệ thống hoạt động ổn định, sẵn sàng cho quá trình báo cáo và đánh giá.

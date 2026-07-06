@@ -8,7 +8,7 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Continue developing the **AIAssistant** project.
+* Continue developing the **AI Assistant** project.
 * Deploy the Frontend to the AWS environment.
 * Complete the system Architecture Diagram.
 * Write the weekly report and update the project report.
@@ -28,7 +28,7 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Achievements:
 
-* Successfully deployed the **AIAssistant** Frontend to AWS:
+* Successfully deployed the **AI Assistant** Frontend to AWS:
   * Completed the build and deployment process.
   * Verified website accessibility.
   * Resolved several issues discovered after deployment.
@@ -42,7 +42,7 @@ pre: " <b> 1.10. </b> "
 * Expanded knowledge of AWS services and tools:
   * Watched technical tutorials from AWS Study Group.
   * Learned additional AWS services related to application deployment and system operations.
-  * Strengthened AWS knowledge to support the completion of the **AIAssistant** project.
+  * Strengthened AWS knowledge to support the completion of the **AI Assistant** project.
 
 * Updated the project documentation:
   * Added detailed information about the system architecture.
@@ -59,4 +59,4 @@ pre: " <b> 1.10. </b> "
   * Discussed technical solutions and project implementation.
   * Monitored project progress and coordinated task assignments.
 
-* Strengthened practical experience in deploying applications on AWS while improving both the project implementation and documentation in preparation for the testing and final completion of the **AIAssistant** system.
+* Strengthened practical experience in deploying applications on AWS while improving both the project implementation and documentation in preparation for the testing and final completion of the **AI Assistant** system.

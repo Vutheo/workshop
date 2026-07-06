@@ -8,7 +8,7 @@ pre: " <b> 1.6. </b> "
 
 ### Mục tiêu tuần 6:
 
-* Tiếp tục phát triển dự án **AIAssistant**.
+* Tiếp tục phát triển dự án **AI Assistant**.
 * Tìm hiểu các dịch vụ AWS phục vụ cho xác thực người dùng và quản lý API.
 * Cải thiện giao diện Website và khắc phục các chức năng còn lỗi.
 * Tham gia **FCAJ Community Day** để cập nhật kiến thức về AI, Cloud Computing và DevOps.
@@ -18,11 +18,11 @@ pre: " <b> 1.6. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --------- | ------------ | --------------- | --------------- |
-| Thứ sáu | Làm việc nhóm, rà soát tiến độ dự án **AIAssistant**, phân chia công việc và chuẩn bị các nội dung cần triển khai trong tuần. | 22/05/2026 | 22/05/2026 | |
+| Thứ sáu | Làm việc nhóm, rà soát tiến độ dự án **AI Assistant**, phân chia công việc và chuẩn bị các nội dung cần triển khai trong tuần. | 22/05/2026 | 22/05/2026 | |
 | Thứ bảy | Tham gia **FCAJ Community Day**, tìm hiểu các chủ đề về Context trong AI, Amazon Q, Prompt Engineering, AI Agent, Multi-Agent System, Amazon CloudFront, kinh nghiệm Hackathon và ứng dụng AI trong doanh nghiệp. | 23/05/2026 | 23/05/2026 | FCAJ Community Day |
-| Chủ nhật | Tìm hiểu **Amazon Cognito**, nghiên cứu User Pool, Identity Pool, cơ chế xác thực người dùng, phân quyền và sử dụng JWT Token cho hệ thống **AIAssistant**. | 24/05/2026 | 24/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Chủ nhật | Tìm hiểu **Amazon Cognito**, nghiên cứu User Pool, Identity Pool, cơ chế xác thực người dùng, phân quyền và sử dụng JWT Token cho hệ thống **AI Assistant**. | 24/05/2026 | 24/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 | Thứ hai | Tìm hiểu **Amazon API Gateway**, nghiên cứu cách tạo REST API, kết nối với AWS Lambda, cấu hình xác thực bằng Amazon Cognito và quy trình xử lý yêu cầu từ Website. | 25/05/2026 | 25/05/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thứ ba | Chỉnh sửa giao diện Website **AIAssistant**, tối ưu bố cục, cải thiện giao diện người dùng và hoàn thiện các trang giới thiệu của hệ thống. | 26/05/2026 | 26/05/2026 | |
+| Thứ ba | Chỉnh sửa giao diện Website **AI Assistant**, tối ưu bố cục, cải thiện giao diện người dùng và hoàn thiện các trang giới thiệu của hệ thống. | 26/05/2026 | 26/05/2026 | |
 | Thứ tư | Sửa các chức năng cơ bản còn lỗi của Website như hiển thị thông tin thành viên, tính điểm thành viên và điều chỉnh một số lỗi giao diện phát sinh trong quá trình kiểm thử. | 27/05/2026 | 27/05/2026 | |
 | Thứ năm | Làm việc nhóm trên Discord, trao đổi tiến độ thực hiện dự án, thống nhất hướng triển khai các chức năng tiếp theo và hỗ trợ các thành viên giải quyết các vấn đề kỹ thuật. | 28/05/2026 | 28/05/2026 | |
 
@@ -33,7 +33,7 @@ pre: " <b> 1.6. </b> "
   * Tìm hiểu khả năng ứng dụng **Amazon Q** trong doanh nghiệp và xây dựng AI Agent.
   * Tiếp cận mô hình **Multi-Agent System** và các yêu cầu về bảo mật, khả năng mở rộng khi triển khai AI.
   * Học được các kỹ thuật tối ưu **Amazon CloudFront** và những kinh nghiệm thực tế từ các dự án AI, Hackathon.
-  * Có định hướng rõ ràng hơn trong việc áp dụng các kiến thức AI và Cloud Computing vào quá trình phát triển dự án **AIAssistant**.
+  * Có định hướng rõ ràng hơn trong việc áp dụng các kiến thức AI và Cloud Computing vào quá trình phát triển dự án **AI Assistant**.
 
 * Hiểu được cơ chế hoạt động của **Amazon Cognito**, bao gồm:
   * User Pool và Identity Pool.
@@ -47,7 +47,7 @@ pre: " <b> 1.6. </b> "
   * Cấu hình xác thực bằng Amazon Cognito.
   * Hiểu quy trình tiếp nhận và xử lý yêu cầu từ Website đến Backend.
 
-* Hoàn thiện và cải thiện giao diện Website **AIAssistant**:
+* Hoàn thiện và cải thiện giao diện Website **AI Assistant**:
   * Điều chỉnh bố cục giao diện.
   * Cải thiện trải nghiệm người dùng.
   * Hoàn thiện các trang giới thiệu của hệ thống.
@@ -63,4 +63,4 @@ pre: " <b> 1.6. </b> "
   * Hỗ trợ xử lý các vấn đề kỹ thuật.
   * Thống nhất kế hoạch phát triển cho các tuần tiếp theo.
 
-* Củng cố kiến thức về xác thực người dùng, quản lý API trên AWS và nâng cao kỹ năng làm việc nhóm, tạo nền tảng cho việc triển khai các chức năng Backend của dự án **AIAssistant** trong giai đoạn tiếp theo.
+* Củng cố kiến thức về xác thực người dùng, quản lý API trên AWS và nâng cao kỹ năng làm việc nhóm, tạo nền tảng cho việc triển khai các chức năng Backend của dự án **AI Assistant** trong giai đoạn tiếp theo.

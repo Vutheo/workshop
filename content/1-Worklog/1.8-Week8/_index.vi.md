@@ -8,7 +8,7 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu tuần 8:
 
-* Tiếp tục phát triển dự án **AIAssistant**.
+* Tiếp tục phát triển dự án **AI Assistant**.
 * Bắt đầu triển khai Backend cho hệ thống.
 * Tìm hiểu dịch vụ Amazon S3 và cách tích hợp vào hệ thống.
 * Hoàn thiện sơ đồ kiến trúc (Architecture Diagram) của đề tài.
@@ -20,7 +20,7 @@ pre: " <b> 1.8. </b> "
 | --- | --------- | ------------ | --------------- | --------------- |
 | Thứ sáu | Họp nhóm, báo cáo tiến độ thực hiện, thống nhất kế hoạch triển khai Backend và phân chia nhiệm vụ cho các thành viên. | 05/06/2026 | 05/06/2026 | |
 | Thứ bảy | Viết báo cáo công việc tuần, tổng hợp các nội dung đã hoàn thành và cập nhật tiến độ dự án. | 06/06/2026 | 06/06/2026 | |
-| Chủ nhật | Bắt đầu triển khai Backend cho dự án **AIAssistant**, xây dựng cấu trúc thư mục và các thành phần cơ bản của hệ thống. | 07/06/2026 | 07/06/2026 | |
+| Chủ nhật | Bắt đầu triển khai Backend cho dự án **AI Assistant**, xây dựng cấu trúc thư mục và các thành phần cơ bản của hệ thống. | 07/06/2026 | 07/06/2026 | |
 | Thứ hai | Tiếp tục phát triển các chức năng Backend, xây dựng API và kiểm tra quá trình kết nối giữa các thành phần của hệ thống. | 08/06/2026 | 08/06/2026 | |
 | Thứ ba | Tìm hiểu dịch vụ **Amazon S3**, nghiên cứu cách lưu trữ dữ liệu và tích hợp vào hệ thống phục vụ việc quản lý tệp. | 09/06/2026 | 09/06/2026 | |
 | Thứ tư | Thiết kế và hoàn thiện sơ đồ kiến trúc (Architecture Diagram) cho đề tài, mô tả các thành phần và luồng hoạt động của hệ thống. | 10/06/2026 | 10/06/2026 | |
@@ -28,7 +28,7 @@ pre: " <b> 1.8. </b> "
 
 ### Kết quả đạt được tuần 8:
 
-* Bắt đầu triển khai Backend cho dự án **AIAssistant**:
+* Bắt đầu triển khai Backend cho dự án **AI Assistant**:
   * Xây dựng cấu trúc dự án.
   * Phát triển các chức năng Backend cơ bản.
   * Kiểm tra khả năng kết nối giữa các thành phần của hệ thống.
@@ -53,4 +53,4 @@ pre: " <b> 1.8. </b> "
   * Thảo luận các giải pháp kỹ thuật.
   * Phân chia công việc cho từng thành viên.
 
-* Củng cố kiến thức về phát triển Backend và dịch vụ Amazon S3, đồng thời hoàn thiện tài liệu thiết kế nhằm phục vụ các giai đoạn triển khai tiếp theo của dự án **AIAssistant**.
+* Củng cố kiến thức về phát triển Backend và dịch vụ Amazon S3, đồng thời hoàn thiện tài liệu thiết kế nhằm phục vụ các giai đoạn triển khai tiếp theo của dự án **AI Assistant**.

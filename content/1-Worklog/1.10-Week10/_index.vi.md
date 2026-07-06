@@ -8,7 +8,7 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Tiếp tục phát triển dự án **AIAssistant**.
+* Tiếp tục phát triển dự án **AI Assistant**.
 * Triển khai Frontend lên môi trường AWS.
 * Hoàn thiện sơ đồ kiến trúc (Architecture Diagram) của hệ thống.
 * Viết báo cáo tuần và cập nhật báo cáo đồ án.
@@ -28,7 +28,7 @@ pre: " <b> 1.10. </b> "
 
 ### Kết quả đạt được tuần 10:
 
-* Triển khai thành công Frontend của dự án **AIAssistant** lên môi trường AWS:
+* Triển khai thành công Frontend của dự án **AI Assistant** lên môi trường AWS:
   * Hoàn thành quá trình build và deploy.
   * Kiểm tra khả năng truy cập của Website.
   * Khắc phục một số lỗi phát sinh sau khi triển khai.
@@ -42,7 +42,7 @@ pre: " <b> 1.10. </b> "
 * Tìm hiểu thêm các công cụ và dịch vụ AWS:
   * Theo dõi các video hướng dẫn từ AWS Study Group.
   * Nghiên cứu thêm các dịch vụ hỗ trợ triển khai và vận hành hệ thống.
-  * Củng cố kiến thức phục vụ quá trình hoàn thiện dự án **AIAssistant**.
+  * Củng cố kiến thức phục vụ quá trình hoàn thiện dự án **AI Assistant**.
 
 * Cập nhật báo cáo đồ án:
   * Bổ sung nội dung về kiến trúc hệ thống.
@@ -59,4 +59,4 @@ pre: " <b> 1.10. </b> "
   * Thảo luận các giải pháp kỹ thuật.
   * Theo dõi tiến độ và phân chia công việc.
 
-* Củng cố kiến thức về triển khai ứng dụng trên AWS, đồng thời hoàn thiện hệ thống và tài liệu dự án nhằm chuẩn bị cho giai đoạn kiểm thử và hoàn thiện sản phẩm **AIAssistant**.
+* Củng cố kiến thức về triển khai ứng dụng trên AWS, đồng thời hoàn thiện hệ thống và tài liệu dự án nhằm chuẩn bị cho giai đoạn kiểm thử và hoàn thiện sản phẩm **AI Assistant**.

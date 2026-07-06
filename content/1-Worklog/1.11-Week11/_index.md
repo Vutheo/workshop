@@ -8,7 +8,7 @@ pre: " <b> 1.11. </b> "
 
 ### Objectives of Week 11:
 
-* Continue improving the **AIAssistant** project.
+* Continue improving the **AI Assistant** project.
 * Prepare the project workshop presentation.
 * Perform web security testing using OWASP ZAP and Postman.
 * Complete the weekly report and update the project documentation.

@@ -8,7 +8,7 @@ pre: " <b> 1.8. </b> "
 
 ### Objectives of Week 8:
 
-* Continue developing the **AIAssistant** project.
+* Continue developing the **AI Assistant** project.
 * Begin implementing the Backend of the system.
 * Learn about Amazon S3 and its integration into the system.
 * Complete the project Architecture Diagram.
@@ -20,7 +20,7 @@ pre: " <b> 1.8. </b> "
 | --- | ---- | ---------- | --------------- | --------- |
 | Friday | Attend the team meeting, report project progress, discuss the Backend implementation plan, and assign tasks to team members. | 05/06/2026 | 05/06/2026 | |
 | Saturday | Write the weekly report, summarize completed tasks, and update the overall project progress. | 06/06/2026 | 06/06/2026 | |
-| Sunday | Start implementing the Backend for the **AIAssistant** project by setting up the project structure and developing the core components. | 07/06/2026 | 07/06/2026 | |
+| Sunday | Start implementing the Backend for the **AI Assistant** project by setting up the project structure and developing the core components. | 07/06/2026 | 07/06/2026 | |
 | Monday | Continue Backend development by implementing APIs and testing the communication between system components. | 08/06/2026 | 08/06/2026 | |
 | Tuesday | Study **Amazon S3**, including object storage concepts and file management for future system integration. | 09/06/2026 | 09/06/2026 | |
 | Wednesday | Design and complete the project's Architecture Diagram to illustrate the system components and workflow. | 10/06/2026 | 10/06/2026 | |
@@ -28,7 +28,7 @@ pre: " <b> 1.8. </b> "
 
 ### Achievements of Week 8:
 
-* Started implementing the Backend of the **AIAssistant** project:
+* Started implementing the Backend of the **AI Assistant** project:
   * Established the project structure.
   * Developed the core Backend functionalities.
   * Tested the communication between system components.
@@ -53,4 +53,4 @@ pre: " <b> 1.8. </b> "
   * Discussed technical solutions.
   * Assigned tasks for the next implementation phase.
 
-* Strengthened knowledge of Backend development and Amazon S3 while improving the system design documentation to support the next stages of the **AIAssistant** project.
+* Strengthened knowledge of Backend development and Amazon S3 while improving the system design documentation to support the next stages of the **AI Assistant** project.
