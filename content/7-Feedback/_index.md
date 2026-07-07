@@ -9,41 +9,41 @@ pre: " <b> 7. </b> "
 ### Overall Evaluation
 
 **1. Learning and Working Environment**  
-The learning and working environment was friendly, open, and supportive throughout the program. Members of the First Cloud AI Journey were approachable and always willing to help whenever I encountered difficulties during my learning process. The collaborative atmosphere made it easier to stay focused and complete assigned tasks. If possible, the program could include more networking or team-building activities to strengthen the connection among participants.
+The learning and working environment was generally friendly and open. The members of the First Cloud Journey program were approachable and always willing to help whenever I encountered difficulties during my learning process. The learning and discussion environment was also quite comfortable, making it easier for me to stay focused while completing the assigned tasks. If possible, the program could include more networking or group-sharing activities to strengthen the connection among participants.
 
-**2. Support from Mentors and Program Administrators**  
-The mentors were knowledgeable, supportive, and explained concepts clearly. They encouraged participants to research independently before providing guidance, which helped develop problem-solving skills and self-learning abilities. The program administrators also responded promptly to questions regarding materials, schedules, and other program-related issues, ensuring that the learning process remained smooth and efficient.
+**2. Support from Mentors / Team Admin**  
+The mentors provided clear and dedicated guidance, were always willing to answer the questions that I did not fully understand, and encouraged me to do my own research before giving specific guidance. The team admin responded quickly regarding learning materials, information, and other program-related matters, helping the learning process run smoothly without interruption.
 
 **3. Relevance of the Learning Content to My Academic Background**  
-The program content was closely related to the knowledge I had learned at university, especially in Cloud Computing and computer systems. In addition, it provided valuable practical knowledge that I had not previously experienced, allowing me to better understand how AWS services are designed and used in real-world environments.
+The content of the program was highly relevant to the knowledge I had learned at university, especially topics related to cloud computing and computer systems. At the same time, the program also expanded my practical knowledge in areas that I had not previously had the opportunity to explore, helping me better understand how AWS services operate in real-world environments.
 
 **4. Learning Opportunities and Skill Development**  
-Throughout the program, I developed many important skills, including teamwork, communication, technical documentation research, and structured problem-solving. Working on a real project also improved my ability to apply theoretical knowledge to practical situations while strengthening my analytical thinking and technical skills.
+Throughout the program, I learned many important skills such as working according to a process, researching technical documentation, teamwork, and communication in a professional learning environment. In addition, being exposed to practical exercises and real-world scenarios helped me improve my thinking and problem-solving abilities.
 
 **5. Learning Culture and Team Collaboration**  
-The learning environment was positive and collaborative. Participants respected one another and actively supported each other throughout the program. Although there were deadlines and project pressure, everyone maintained a cooperative attitude, creating a motivating atmosphere for learning and project development.
+I found the learning environment in the program to be quite positive. Everyone respected and supported one another throughout the learning process and while completing assigned tasks. Although there was pressure to meet deadlines, the spirit of collaboration was well maintained, making me feel more comfortable and motivated to participate.
 
 **6. Learning Support Activities**  
-The First Cloud AI Journey program provided various training sessions and technical workshops that helped me better understand how AWS services are applied in real-world projects. The learning materials were well organized, and the roadmap was clearly structured, making it easier to follow the program and complete each learning objective. Overall, the support activities were comprehensive and especially suitable for beginners.
+During the First Cloud Journey program, I participated in internal guidance sessions and training, which were very helpful in allowing me to better understand how AWS services are applied in real-world situations. In addition, having well-prepared learning materials and a clear learning direction made it easier for me to follow the program and complete the assigned tasks. Overall, the learning support activities were comprehensive and suitable for beginners.
 
 ### Additional Questions
 
 - **What was the most satisfying part of your experience in the program?**  
-  The most valuable experience was having the opportunity to work directly with AWS services and gain a deeper understanding of how cloud-based systems are designed, deployed, and managed in real-world scenarios.
+  The most satisfying part for me was having the opportunity to gain hands-on experience with AWS services and better understand how cloud systems are built and operated.
 
 - **What do you think could be improved for future cohorts?**  
-  I believe the program could include more hands-on workshops and collaborative practical sessions so that participants can apply their knowledge more effectively and gain additional real-world experience.
+  I think the program could include more hands-on sessions or group workshops so that participants can better understand and apply what they have learned.
 
 - **Would you recommend this program to your friends? Why?**  
-  Yes. I would definitely recommend it because it provides a solid foundation in Cloud Computing through a combination of theoretical knowledge and practical experience. The mentors are supportive, and the learning roadmap is well organized, making it suitable for beginners as well as students who want to pursue a career in cloud technologies.
+  Yes. I would recommend it because it provides beginners with a solid foundation in cloud computing through both theoretical knowledge and practical experience. In addition, the guidance is quite detailed, making the program easy to follow.
 
 ### Suggestions and Expectations
 
-- **Do you have any suggestions for improving the program?**  
-  At the moment, I do not have any additional suggestions because my overall learning experience has been very positive and aligned with my learning objectives.
+- **Do you have any suggestions for improving the experience in the program?**  
+  At the moment, I do not have any additional suggestions because my learning experience has been very positive overall and aligned with my learning objectives.
 
 - **Would you like to continue participating in this program in the future?**  
   Yes. If given the opportunity, I would be happy to continue participating in future programs to further improve my knowledge and practical skills in Cloud Computing and AWS.
 
 - **Additional comments (optional):**  
-  I do not have any further comments. I would like to thank the mentors, organizers, and everyone involved for creating such a valuable learning experience.
+  I do not have any further comments. I would like to thank the mentors, the organizers, and everyone involved for creating such a valuable learning experience.
