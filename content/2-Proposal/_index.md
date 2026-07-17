@@ -155,5 +155,5 @@ The AI Assistant system uses a Serverless architecture integrating all 17 AWS se
 ### 8. Source Code & Live Demo
 
 *   **Project Source Code (GitHub):** [https://github.com/LeQu0cAnh/PetWebAWSProject](https://github.com/LeQu0cAnh/PetWebAWSProject)
-*   **Workshop Documentation (GitHub Pages):** [https://locle1010.github.io/workshop/](https://locle1010.github.io/workshop/)
+*   **Workshop Documentation (GitHub Pages):** [https://vutheo.github.io/FCAJ-VuThiThanhThao-2280618933-Workshop/](https://vutheo.github.io/FCAJ-VuThiThanhThao-2280618933-Workshop/)
 *   **Application Live Demo (Web):** [https://aa.locle1010.dpdns.org](https://aa.locle1010.dpdns.org)
